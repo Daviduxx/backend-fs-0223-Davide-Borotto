@@ -1,0 +1,59 @@
+package it.epicode.be;
+
+import java.util.Scanner;
+
+public class Helloworld {
+
+public static void main (String[] args)
+		{
+		// Stampa a console  la frase
+		System.out.println("This is my first Epicode Java Project!");
+		
+		int risultato = moltiplicazione(4, 5);
+		System.out.println(risultato);
+		
+		String frase = concatenazione("Ciao", 7);
+		System.out.println(frase);
+		
+		String[] arrInit = {"html", "css"};
+		String[] arrln = InseriscilnArray(arrInit);
+		System.out.println(arrln);
+		
+		user();
+		}
+
+public static int moltiplicazione(int x, int y) {
+	int result = x * y;
+	return result;
+}
+
+
+public static String concatenazione(String x, int y) {
+	String result = x + y;
+	return result;
+}
+
+
+public static String[] InseriscilnArray(String[] arr) {
+	String[] newArr = arr;
+	return newArr;
+	
+}
+
+public static void user() {
+	Scanner str1 = new Scanner(System.in);
+	Scanner str2 = new Scanner(System.in);
+	Scanner str3 = new Scanner(System.in);
+	System.out.println("Scrivi un linguaggio di programmazione:");
+	String ling1 = str1.nextLine();
+	System.out.println("Scrivi un  altro linguaggio di programmazione:");
+	String ling2 = str2.nextLine();
+	System.out.println("Ancora uno:");
+	String ling3 = str2.nextLine();
+	System.out.println("I linguaggi inseriti sono:" + ling1 + " " + ling2 + " " + ling3);
+}
+
+
+}
+
+
