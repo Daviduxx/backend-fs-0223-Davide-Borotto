@@ -5,16 +5,22 @@ import java.util.Scanner;
 public class While {
 	
 	public static void Scrivi() {
-		//String test = null;
+		
 		Scanner sc = new Scanner(System.in);
-			do {
-			System.out.println("Scrivi un carattere a piacere:");
+			while(true) {
+			System.out.println("Scrivi unav stringa a piacere:");
 			String test = sc.nextLine();
-			System.out.println(test.split(","));
-			
-		}
-		while (test != ":q");
-			sc.close();	
+			if(test.equals(":q")) {
+				break;
+			}
+			String[] testoSplittato = test.split("");
+			for(int i = 0; i < testoSplittato.length; i++) {
+				System.out.println(testoSplittato[i] + ",");
+				}
+			}
+			sc.close();
+
+		
 
 }
 }

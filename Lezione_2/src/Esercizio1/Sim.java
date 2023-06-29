@@ -2,22 +2,27 @@ package Esercizio1;
 
 public class Sim {
 	
+	int numeroTelefono;
+	Chiamata[] chiamate;
+	int credito;
 	
-	public int numeroTelefono;
-	public int[] chiamate = {};
-	public static int credito = 0;
-	
-	public Sim(int numeroTelefono, int[]chiamate) {
+	public Sim(int numeroTelefono) {
 		this.numeroTelefono = numeroTelefono;
-		this.chiamate = chiamate;
-		credito = 0;
+		this.chiamate = new Chiamata[5];
+		this.credito = 0;
 	}
 	
 
-	public void Stampa(Sim s) {
+	public void Stampa() {
 		System.out.println("Numero di telefono: " + this.numeroTelefono);
-		System.out.println("Credito: " + credito);
-		System.out.println("Chiamate effettuate :" + this.chiamate);
+		System.out.println("Credito: " + this.credito);
+		System.out.println("Chiamate effettuate :");
+		for (int i = 0; i < this.chiamate.length; i++) {
+			if(this.chiamate[i] != null) {
+				System.out.println(this.chiamate[i].numeroChiamato + "durata: " + this.chiamate[i].numeroChiamato);
+			}
+		}
 	}
+	
 
 }

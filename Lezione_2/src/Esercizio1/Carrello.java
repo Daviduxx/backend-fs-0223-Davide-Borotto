@@ -2,7 +2,7 @@ package Esercizio1;
 
 public class Carrello {
 	Cliente cliente;
-	String[] articoli;
+	Articolo[] articoli;
 	int totale;
 
 }

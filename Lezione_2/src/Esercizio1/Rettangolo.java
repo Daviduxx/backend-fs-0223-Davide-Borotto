@@ -11,19 +11,27 @@ public class Rettangolo {
 	}
 	
 	public int Perimetro() {
-		int perimetro = (this.altezza + this.larghezza) * 2;
-		return perimetro;
+		return (this.altezza + this.larghezza) * 2;
 	}
 	
 	public int Area() {
-		int area = this.altezza * this.larghezza;
-		return area;
+		return this.altezza * this.larghezza;
 	}
 	
 	public void Dati(Rettangolo r) {
 		System.out.println("Il perimetro del rettangolo è " + r.Perimetro() + "L'area del rettangolo è di " + r.Area());
 	}
 	
-	
+	public static void StampaDueRettangoli(Rettangolo r1, Rettangolo r2) {
+		int sommaPerimetri = r1.Perimetro() + r2.Perimetro();
+		int sommaAree = r1.Area() + r2.Area();
+		System.out.println("Il perimetro del primo rettangolo è " + r1.Perimetro() + 
+		"L'area del primo rettangolo è di " + r1.Area() +
+		"Il perimetro del secondo rettangolo è " + r2.Perimetro() + 
+		"L'area del secondo rettangolo è di " + r2.Area() +
+		"La somma dei perimetri è di " + sommaPerimetri +
+		"La somma delle aree è di " + sommaAree);
+	}
+
 
 }

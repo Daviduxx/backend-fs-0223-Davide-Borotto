@@ -1,9 +1,11 @@
 package Esercizio1;
 
+import java.util.Date;
+
 public class Cliente {
 	int codiceCliente;
 	String nomeCognome;
 	String email;
-	int dataIscrizione;
+	Date dataIscrizione;
 
 }

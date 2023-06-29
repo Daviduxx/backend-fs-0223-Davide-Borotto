@@ -6,50 +6,61 @@ public class Helloworld {
 
 public static void main (String[] args)
 		{
-		// Stampa a console  la frase
-		System.out.println("This is my first Epicode Java Project!");
+		//ESERCIZIO 1
+		System.out.println("MOLTIPLICAZIONE: " + moltiplicazione(4,5));
 		
-		int risultato = moltiplicazione(4, 5);
-		System.out.println(risultato);
+		System.out.println("CONCATENAZIONE: " + concatenazione("ciao", 5));
 		
-		String frase = concatenazione("Ciao", 7);
-		System.out.println(frase);
+		//ESERCIZIO 2
+		String[] arrInit = {"html", "css", "js", "ts", "java"};
 		
-		String[] arrInit = {"html", "css"};
-		String[] arrln = InseriscilnArray(arrInit);
-		System.out.println(arrln);
+		String[] arrModificato = InseriscilnArray(arrInit, "angular");
 		
-		double perimetro = perimetro(2.5, 3.5);
-		System.out.println(perimetro);
+		for (int i = 0; i < arrModificato.length; i++) {
+			System.out.println(arrModificato[i]);
+		}
 		
-		int parDisp = parioDispari(7);
-		System.out.println(parDisp);
+		//ESERCIZIO 4
+		System.out.println("perimetro: " + perimetro(2.5,2.5));
+		
+		System.out.println("PARI O DISPARI? " + parioDispari(7));
 		
 		double area = areaTriangolo(2.5, 2.5);
 		System.out.println("area triangolo: " + area);
-		
-		String[] arr = {"html", "css", "js", "ts", "php"};
-		System.out.println(inserisciArray(arr, "java"));
-		
+	
+		//ESERCIZIO 3
 		user();
 		}
 
 public static int moltiplicazione(int x, int y) {
-	int result = x * y;
-	return result;
+	return x * y;
 }
 
 
 public static String concatenazione(String x, int y) {
-	String result = x + y;
-	return result;
+	return x + y;
 }
 
 
-public static String[] InseriscilnArray(String[] arr) {
-	String[] newArr = arr;
-	return newArr;
+public static String[] InseriscilnArray(String[] arr, String str) {
+	String[] newArr = new String[6];
 	
+	newArr[0] = arr[0];
+	newArr[1] = arr[1];
+	newArr[2] = arr[2];
+	newArr[3] = str;
+	newArr[4] = arr[3];
+	newArr[5] = arr[4];
+	
+//	for(int i = 0; i < arr.length; i++) {
+//		if(i == 3) {
+//			newArr[i] = str;		
+//		}
+//		else {
+//			newArr[i] = arr[i];		
+//		}
+//	}
+	return newArr;
 }
 
 public static void user() {
@@ -63,11 +74,11 @@ public static void user() {
 	String ling3 = sc.nextLine();
 	System.out.println("I linguaggi inseriti sono: " + ling1 + " " + ling2 + " " + ling3);
 	System.out.println("I linguaggi inseriti sono: " + ling3 + " " + ling2 + " " + ling1);
+	sc.close();
 }
 
 public static double perimetro(double x, double y) {
-	double per = (x + y) * 2;
-	return per;
+	return (x + y) * 2;
 }
 
 public static int parioDispari(int x) {
@@ -82,21 +93,7 @@ public static int parioDispari(int x) {
 }
 
 public static double areaTriangolo(double base, double altezza) {
-	double area = (base * altezza) / 2;
-	return area;
-}
-
-public static String[] inserisciArray(String[] arr, String str) {
-	String[] arrIngresso = new String[6];
-	
-	arrIngresso[0] = arr[0];
-	arrIngresso[1] = arr[1];
-	arrIngresso[2] = arr[2];
-	arrIngresso[3] = str;
-	arrIngresso[4] = arr[3];
-	arrIngresso[5] = arr[4];
-	
-	return arrIngresso;
+	return (base * altezza) / 2;
 }
 
 
