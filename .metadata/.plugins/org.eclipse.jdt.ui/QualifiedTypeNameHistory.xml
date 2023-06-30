@@ -2,4 +2,8 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="flow_control.Ifelse"/>
+    <fullyQualifiedTypeName name="com.epicode.classes.Livello"/>
+    <fullyQualifiedTypeName name="com.epicode.classes.Dipartimento"/>
+    <fullyQualifiedTypeName name="com.epicode.classes.Dipendente"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
 </qualifiedTypeNameHistroy>
