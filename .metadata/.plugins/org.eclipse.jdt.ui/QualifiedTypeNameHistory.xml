@@ -6,4 +6,8 @@
     <fullyQualifiedTypeName name="com.epicode.classes.Dipartimento"/>
     <fullyQualifiedTypeName name="com.epicode.classes.Dipendente"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="com.epicode.classes.Audio"/>
+    <fullyQualifiedTypeName name="com.epicode.classes.Video"/>
+    <fullyQualifiedTypeName name="com.epicode.classes.Immagine"/>
+    <fullyQualifiedTypeName name="com.epicode.classes.ElementoMultimediale"/>
 </qualifiedTypeNameHistroy>
