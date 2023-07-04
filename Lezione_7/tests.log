@@ -1,0 +1,52 @@
+2023-07-04 14:47:40,923 [main] INFO  com.epicode.main.MainProject - 3
+2023-07-04 14:58:44,276 [main] INFO  com.epicode.main.MainProject - Elemento duplicato: css
+2023-07-04 14:58:44,292 [main] INFO  com.epicode.main.MainProject - Elemento duplicato: html
+2023-07-04 14:58:44,293 [main] INFO  com.epicode.main.MainProject - NUmero di parole distinte: 3
+2023-07-04 14:58:44,293 [main] INFO  com.epicode.main.MainProject - Elemento distinto: css
+2023-07-04 14:58:44,294 [main] INFO  com.epicode.main.MainProject - Elemento distinto: php
+2023-07-04 14:58:44,294 [main] INFO  com.epicode.main.MainProject - Elemento distinto: html
+2023-07-04 15:31:49,770 [main] INFO  com.epicode.main.MainProject - 8
+2023-07-04 15:33:02,052 [main] INFO  com.epicode.main.MainProject - 8
+2023-07-04 15:33:27,979 [main] INFO  com.epicode.main.MainProject - 8
+2023-07-04 15:35:37,361 [main] INFO  com.epicode.main.MainProject - 8lunvhezza del singolo array
+2023-07-04 15:35:37,368 [main] INFO  com.epicode.main.MainProject - Elemento con indice pari: 23
+2023-07-04 15:35:37,368 [main] INFO  com.epicode.main.MainProject - Elemento con indice pari: 14
+2023-07-04 15:35:37,368 [main] INFO  com.epicode.main.MainProject - Elemento con indice pari: 78
+2023-07-04 15:35:37,368 [main] INFO  com.epicode.main.MainProject - Elemento con indice pari: 100
+2023-07-04 15:35:37,368 [main] INFO  com.epicode.main.MainProject - Elemento con indice pari: 30
+2023-07-04 15:35:37,368 [main] INFO  com.epicode.main.MainProject - Elemento con indice pari: 58
+2023-07-04 15:35:37,368 [main] INFO  com.epicode.main.MainProject - Elemento con indice pari: 92
+2023-07-04 15:35:37,369 [main] INFO  com.epicode.main.MainProject - Elemento con indice pari: 57
+2023-07-04 15:36:03,843 [main] INFO  com.epicode.main.MainProject - 8lunvhezza del singolo array
+2023-07-04 15:36:03,850 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 14
+2023-07-04 15:36:03,850 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 59
+2023-07-04 15:36:03,850 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 22
+2023-07-04 15:36:03,850 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 56
+2023-07-04 15:36:03,850 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 83
+2023-07-04 15:36:03,850 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 100
+2023-07-04 15:36:03,850 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 73
+2023-07-04 15:36:03,850 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 56
+2023-07-04 16:15:44,006 [main] INFO  com.epicode.main.MainProject - [davide]
+2023-07-04 16:16:09,952 [main] INFO  com.epicode.main.MainProject - [gianni, davide]
+2023-07-04 16:16:45,065 [main] INFO  com.epicode.main.MainProject - [gianni, davide]
+2023-07-04 16:16:45,071 [main] INFO  com.epicode.main.MainProject - [Ljava.lang.Object;@7b98f307
+2023-07-04 16:17:03,396 [main] INFO  com.epicode.main.MainProject - [gianni, davide]
+2023-07-04 16:17:03,403 [main] INFO  com.epicode.main.MainProject - gianni
+2023-07-04 16:18:02,282 [main] INFO  com.epicode.main.MainProject - [gianni, davide]
+2023-07-04 16:18:02,289 [main] INFO  com.epicode.main.MainProject - [Ljava.lang.Object;@7b98f307
+2023-07-04 16:18:02,289 [main] INFO  com.epicode.main.MainProject - Elemento key: gianni Value: 67890
+2023-07-04 16:18:02,289 [main] INFO  com.epicode.main.MainProject - Elemento key: davide Value: 12345
+2023-07-04 16:28:54,680 [main] INFO  com.epicode.main.MainProject - 
+2023-07-04 16:28:54,689 [main] INFO  com.epicode.main.MainProject - 
+2023-07-04 16:31:02,358 [main] INFO  com.epicode.main.MainProject - Nome: gianniNumero di telefono: null
+2023-07-04 16:31:02,367 [main] INFO  com.epicode.main.MainProject - Nome: davideNumero di telefono: null
+2023-07-04 16:32:16,188 [main] INFO  com.epicode.main.MainProject - Nome: gianni Numero di telefono: 67890
+2023-07-04 16:32:16,194 [main] INFO  com.epicode.main.MainProject - Nome: davide Numero di telefono: 12345
+2023-07-04 16:34:01,889 [main] INFO  com.epicode.main.MainProject - Nome: gianni Numero di telefono: 67890
+2023-07-04 16:34:01,897 [main] INFO  com.epicode.main.MainProject - Nome: davide Numero di telefono: 12345
+2023-07-04 16:34:01,897 [main] INFO  com.epicode.main.MainProject - Nome: pluto Numero di telefono: 223344
+2023-07-04 16:34:01,897 [main] INFO  com.epicode.main.MainProject - Nome: pippo Numero di telefono: 112233
+2023-07-04 16:34:01,897 [main] INFO  com.epicode.main.MainProject - Nome: gianni Numero di telefono: 67890
+2023-07-04 16:34:01,897 [main] INFO  com.epicode.main.MainProject - Nome: davide Numero di telefono: 12345
+2023-07-04 16:34:01,897 [main] INFO  com.epicode.main.MainProject - Nome: pippo Numero di telefono: 112233
+2023-07-04 16:34:01,897 [main] INFO  com.epicode.main.MainProject - Nome: davidenumero: 12345

@@ -10,10 +10,10 @@ public class MainProject {
 
 		Logger log = LoggerFactory.getLogger(MainProject.class);
 		//ESERCIZIO 1
-		//Stampa.stampaInArr();
+		 Stampa.stampaInArr();
 		
 		//esercizio 2
-		Consumo.calcola();
+		//Consumo.calcola();
 	}
 
 }

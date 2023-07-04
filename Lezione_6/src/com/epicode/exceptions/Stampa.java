@@ -2,8 +2,13 @@ package com.epicode.exceptions;
 
 import java.util.Scanner;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 public class Stampa {
+	
+	static Logger log = LoggerFactory.getLogger(Stampa.class);
 	
 	private static int[] arr = new int[5];
 	private static int min = 0;
@@ -16,7 +21,7 @@ public class Stampa {
 	public static void stampaInArr() {
 		while(true) {
 			Scanner sc = new Scanner(System.in);
-			System.out.println("In che posizione vuoi scrivere?");
+			log.info("info");
 			try {
 				int posizione = Integer.parseInt(sc.nextLine());
 
