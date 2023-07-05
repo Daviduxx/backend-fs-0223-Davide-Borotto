@@ -120,15 +120,17 @@ public class MainProject {
 		m.remove(nome);
 	}
 	
-//	public static void cercaContatto(String numero) {
-//	
-//	    for (Entry<String, String> entry : m.entrySet()) {
-//	        if (entry.getValue().equals(value)) {
-//	            return entry.getKey();
-//	        }
-//	    }
-//
-//	}
+	public static void cercaContatto(String numero) {
+		Set<String> nomi = m.keySet();
+		for (Object c : nomi) {
+			if(numero.equals(m.get(nomi))) {
+				log.info("Chiave: " + nomi + "valore: " + numero);
+			}
+		}
+	    
+
+
+	}
 	
 	public static void cercaPerNome(String nome) {
 		log.info("Nome: " + nome + "numero: " + m.get(nome));

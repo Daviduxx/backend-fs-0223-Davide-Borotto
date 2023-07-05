@@ -2,18 +2,14 @@ package com.epicode.bank;
 
 public class BancaException extends Exception {
 	
-	private String errore;
 	
-	public BancaException(String message, String errore) {
+	public BancaException(String message) {
 		super(message);
-		this.errore = errore;
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public String toString() {
-		return getMessage();
+		return this.getMessage();
 	}
-	
-	
-
 }

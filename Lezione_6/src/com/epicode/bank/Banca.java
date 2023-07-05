@@ -1,8 +1,10 @@
 package com.epicode.bank;
 
 public class Banca {
-	
-	public static void main(String args[]) {
+
+	public static void main(String[] args) {
+		
+		
 		ContoCorrente conto1 = new ContoCorrente("Grossi Mario", 20000.0);
 
 		System.out.println("Saldo conto: " + conto1.restituisciSaldo());
@@ -15,7 +17,7 @@ public class Banca {
 			System.out.println("Errore durante il prelievo: " + e);
 			e.printStackTrace();
 		}
-
+		
 		ContoOnLine conto2 = new ContoOnLine("Rossi Luigi", 50350.0, 1500);
 
 		conto2.stampaSaldo();
@@ -29,6 +31,7 @@ public class Banca {
 			System.out.println("Errore durante il prelievo: " + e);
 			e.printStackTrace();
 		}
-	}
-}
 
+	}
+
+}

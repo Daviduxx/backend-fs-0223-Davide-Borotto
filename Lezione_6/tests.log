@@ -1,1 +1,38 @@
 17:31:28.041 [main] INFO  com.epicode.exceptions.Stampa - info
+21:49:23.963 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 0 Valore: 6
+21:49:23.969 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 1 Valore: 1
+21:49:23.969 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 2 Valore: 7
+21:49:23.969 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 3 Valore: 7
+21:49:23.969 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 4 Valore: 2
+21:56:38.073 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 0 Valore: 0
+21:56:38.080 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 1 Valore: 1
+21:56:38.080 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 2 Valore: 2
+21:56:38.080 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 3 Valore: 2
+21:56:38.080 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 4 Valore: 3
+21:57:11.414 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 0 Valore: 9
+21:57:11.422 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 1 Valore: 8
+21:57:11.422 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 2 Valore: 2
+21:57:11.422 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 3 Valore: 8
+21:57:11.422 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 4 Valore: 9
+21:57:26.515 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 0 Valore: 4
+21:57:26.522 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 1 Valore: 10
+21:57:26.523 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 2 Valore: 3
+21:57:26.523 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 3 Valore: 4
+21:57:26.523 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 4 Valore: 3
+22:01:29.136 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 0 Valore: 0
+22:01:29.141 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 1 Valore: 7
+22:01:29.141 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 2 Valore: 2
+22:01:29.141 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 3 Valore: 6
+22:01:29.141 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 4 Valore: 10
+22:01:33.837 [main] INFO  com.epicode.exceptions.MainProject - FINE
+22:01:38.321 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 0 Valore: 8
+22:01:38.326 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 1 Valore: 5
+22:01:38.326 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 2 Valore: 8
+22:01:38.327 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 3 Valore: 10
+22:01:38.327 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 4 Valore: 7
+22:04:03.562 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 0 Valore: 9
+22:04:03.569 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 1 Valore: 4
+22:04:03.569 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 2 Valore: 8
+22:04:03.569 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 3 Valore: 8
+22:04:03.569 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 4 Valore: 7
+22:04:08.344 [main] ERROR com.epicode.exceptions.MainProject - Index 9 out of bounds for length 5
