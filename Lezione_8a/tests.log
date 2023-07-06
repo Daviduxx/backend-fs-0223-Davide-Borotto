@@ -1,0 +1,29 @@
+2023-07-05 17:11:51,445 [main] WARN  com.epicode.thread.Main - FINE
+2023-07-05 17:11:51,445 [Thread-0] INFO  com.epicode.thread.Main - Ciclo n. 0 *
+2023-07-05 17:11:51,445 [Thread-1] INFO  com.epicode.thread.Main - Ciclo n. 0 #
+2023-07-05 17:11:52,465 [Thread-0] INFO  com.epicode.thread.Main - Ciclo n. 1 *
+2023-07-05 17:11:52,465 [Thread-1] INFO  com.epicode.thread.Main - Ciclo n. 1 #
+2023-07-05 17:11:53,471 [Thread-0] INFO  com.epicode.thread.Main - Ciclo n. 2 *
+2023-07-05 17:11:53,473 [Thread-1] INFO  com.epicode.thread.Main - Ciclo n. 2 #
+2023-07-05 17:11:54,477 [Thread-0] INFO  com.epicode.thread.Main - Ciclo n. 3 *
+2023-07-05 17:11:54,479 [Thread-1] INFO  com.epicode.thread.Main - Ciclo n. 3 #
+2023-07-05 17:11:55,481 [Thread-1] INFO  com.epicode.thread.Main - Ciclo n. 4 #
+2023-07-05 17:11:55,483 [Thread-0] INFO  com.epicode.thread.Main - Ciclo n. 4 *
+2023-07-05 17:11:56,485 [Thread-1] INFO  com.epicode.thread.Main - Ciclo n. 5 #
+2023-07-05 17:11:56,485 [Thread-0] INFO  com.epicode.thread.Main - Ciclo n. 5 *
+2023-07-05 17:11:57,490 [Thread-0] INFO  com.epicode.thread.Main - Ciclo n. 6 *
+2023-07-05 17:11:57,493 [Thread-1] INFO  com.epicode.thread.Main - Ciclo n. 6 #
+2023-07-05 17:11:58,494 [Thread-1] INFO  com.epicode.thread.Main - Ciclo n. 7 #
+2023-07-05 17:11:58,496 [Thread-0] INFO  com.epicode.thread.Main - Ciclo n. 7 *
+2023-07-05 17:11:59,500 [Thread-1] INFO  com.epicode.thread.Main - Ciclo n. 8 #
+2023-07-05 17:11:59,502 [Thread-0] INFO  com.epicode.thread.Main - Ciclo n. 8 *
+2023-07-05 17:12:00,508 [Thread-0] INFO  com.epicode.thread.Main - Ciclo n. 9 *
+2023-07-05 17:12:00,506 [Thread-1] INFO  com.epicode.thread.Main - Ciclo n. 9 #
+2023-07-05 17:34:00,873 [main] INFO  com.epicode.es2.MyThread - somma:1464572
+2023-07-05 17:34:00,879 [main] INFO  com.epicode.es2.MyThread - somma:1498917
+2023-07-05 17:34:00,880 [main] INFO  com.epicode.es2.MyThread - somma:1500278
+2023-07-05 17:34:00,880 [Thread-3] INFO  com.epicode.es2.MyThread - somma totale: 4463767
+2023-07-05 17:34:57,448 [main] INFO  com.epicode.es2.MyThread - somma:1472873
+2023-07-05 17:34:57,457 [main] INFO  com.epicode.es2.MyThread - somma:1476623
+2023-07-05 17:34:57,457 [main] INFO  com.epicode.es2.MyThread - somma:1436731
+2023-07-05 17:34:57,457 [Thread-3] INFO  com.epicode.es2.MyThread - somma totale: 4386227

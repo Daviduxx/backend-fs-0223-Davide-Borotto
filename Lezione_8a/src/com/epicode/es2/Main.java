@@ -14,9 +14,9 @@ public class Main {
 		int[] arr = new int[3000];
 		generaArr(arr);
 		
-		MyThread t1 = new MyThread(0, 999);
-		MyThread t2 = new MyThread(1000, 1999);
-		MyThread t3 = new MyThread(2000, 2999);
+		MyThread t1 = new MyThread(0, 1000);
+		MyThread t2 = new MyThread(1000, 2000);
+		MyThread t3 = new MyThread(2000, 3000);
 		
 		int sommaArr1 = t1.somma(arr);
 		int sommaArr2 = t2.somma(arr);
