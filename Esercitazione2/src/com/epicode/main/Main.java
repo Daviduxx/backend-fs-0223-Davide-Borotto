@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.Year;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -28,15 +29,9 @@ public class Main {
 		aggiungiElemento(new Libro("00-11-77-F", "the Lord of the Rings", Year.of(1970), 1100, "JRR Tolkien", Genere.FANTASY), listaCatalogo);
 		aggiungiElemento(new Rivista("00-11-55-D", "Focus", Year.of(2014), 145, Periodicita.SETTIMANALE), listaCatalogo);
 		aggiungiElemento(new Rivista("00-11-66-E", "Rolling Stone", Year.of(2017), 115, Periodicita.SETTIMANALE), listaCatalogo);
-		//		for(Catalogo c : listaCatalogo) {
-//			System.out.println(c);
-//		}
-		
+	
 		eliminaElemento("00-11-33-B", listaCatalogo);
-//		for(Catalogo c : listaCatalogo) {
-//			System.out.println(c);
-//		}
-		
+	
 		cercaElementoPerISBN("00-11-55-D", listaCatalogo);
 		cercaElementoPerAnno(Year.of(2017), listaCatalogo);
 		cercaElementoPerAutore("JRR Tolkien", listaCatalogo);
@@ -47,9 +42,16 @@ public class Main {
 			
 			e.printStackTrace();
 		}
+		
+		try {
+			caricaDaDisco();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
-	//AGGIUNTA DI UN ELEMENTO (CON CONTROLLI E GESTIONE ERRORI)
+
 	public static void aggiungiElemento(Catalogo elemento, Set<Catalogo> set) {
 		try {
 			Set<Catalogo> controllo = set.stream()
@@ -136,13 +138,24 @@ public class Main {
 		String elemento = "";
 		for(Catalogo c : listaCatalogo) {
 			if(c instanceof Libro) {
-				elemento += "Libro: " + c.getISBN() + "%" + c.getTitolo() + "%" + c.getNumeroPagine() + "%" + c.getAnnoPubblicazione() + "#" + "\n";
+				elemento +=  c.getISBN() + "%" + c.getTitolo() + "%" + c.getNumeroPagine() + "%" + c.getAnnoPubblicazione() + "#" + "\n";
 			}
 			else if(c instanceof Rivista) {
-				elemento += "Rivista: " + c.getISBN() + "%" + c.getTitolo() + "%" + c.getNumeroPagine() + "%" + c.getAnnoPubblicazione() + "#" + "\n";				
+				elemento += c.getISBN() + "%" + c.getTitolo() + "%" + c.getNumeroPagine() + "%" + c.getAnnoPubblicazione() + "#" + "\n";				
 			}
 		}
 		FileUtils.writeStringToFile(file, elemento, "UTF-8");
+		log.info("Archivio aggiornato su file " + file.getPath());
+	}
+	
+	public static List<Catalogo> caricaDaDisco() throws IOException {
+		String archivio = FileUtils.readFileToString(file, "UTF-8");
+		System.out.println(archivio);
+		List<String> splittedCatalogo = Arrays.asList(archivio.split("#"));
+		System.out.println(splittedCatalogo);
+		
+		return null;
+		//no array
 	}
 	
 }
