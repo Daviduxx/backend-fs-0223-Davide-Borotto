@@ -29,25 +29,24 @@ public class Main {
 		aggiungiElemento(new Libro("00-11-77-F", "the Lord of the Rings", Year.of(1970), 1100, "JRR Tolkien", Genere.FANTASY), listaCatalogo);
 		aggiungiElemento(new Rivista("00-11-55-D", "Focus", Year.of(2014), 145, Periodicita.SETTIMANALE), listaCatalogo);
 		aggiungiElemento(new Rivista("00-11-66-E", "Rolling Stone", Year.of(2017), 115, Periodicita.SETTIMANALE), listaCatalogo);
-	
+		aggiungiElemento(new Libro("00-11-77-G", "Mille splendidi soli", Year.of(2013), 321, "Khaled Hosseini", Genere.ROMANZO), listaCatalogo);
+		
 		eliminaElemento("00-11-33-B", listaCatalogo);
 	
-		cercaElementoPerISBN("00-11-55-D", listaCatalogo);
-		cercaElementoPerAnno(Year.of(2017), listaCatalogo);
-		cercaElementoPerAutore("JRR Tolkien", listaCatalogo);
+		cercaElementoPerISBN("00-11-66-E", listaCatalogo);
+		cercaElementoPerAnno(2017, listaCatalogo);
+		cercaElementoPerAutore("pippo", listaCatalogo);
 		
 		try {
 			salvaSuDisco();
 		} catch (IOException e) {
-			
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
 		
 		try {
 			caricaDaDisco();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
 	}
 	
@@ -106,17 +105,30 @@ public class Main {
 		List<Catalogo> elementoCercato = set.stream()
 				.filter(s -> s.getISBN().equals(isbn))
 				.collect(Collectors.toList());
-		log.info("Trovato: " + elementoCercato);
+		if(elementoCercato.size() != 0) {
+			log.info("Trovato: " + elementoCercato);			
+		}
+		else {
+			log.error("Nessun elemento trovato");
+		}
+	
 		return elementoCercato;
 	}
 	
-	public static List<Catalogo> cercaElementoPerAnno(Year anno, Set<Catalogo> set){
+	public static List<Catalogo> cercaElementoPerAnno(int anno, Set<Catalogo> set){
+		
 		List<Catalogo> elementoCercato = set.stream()
-				.filter(s -> s.getAnnoPubblicazione().equals(anno))
+				.filter(s -> s.getAnnoPubblicazione().equals(Year.of(anno)))
 				.collect(Collectors.toList());
-		for(Catalogo c : elementoCercato) {
-			log.info("Trovato: " + c);
+		if(elementoCercato.size() != 0) {
+			for(Catalogo c : elementoCercato) {
+				log.info("Trovato: " + c);
+			}
 		}
+		else {
+			log.error("Nessun elemento trovato");
+		}
+		
 		return elementoCercato;
 	}
 	
@@ -127,9 +139,15 @@ public class Main {
 				.filter(s -> s.getAutore().equals(autore))
 				.distinct()
 				.collect(Collectors.toList());
-		for(Libro l : elementoCercato) {
-			log.info("Trovato: " + l);
+		if(elementoCercato.size() != 0) {
+			for(Libro l : elementoCercato) {
+				log.info("Trovato: " + l);
+			}
 		}
+		else {
+			log.error("Nessun elemento trovato");
+		}
+		
 		return elementoCercato;
 	}
 	
@@ -139,11 +157,11 @@ public class Main {
 		for(Catalogo c : listaCatalogo) {
 			if(c instanceof Libro) {
 				Libro l = (Libro) c;
-				elemento +=  "Libro: " + "%" + l.getISBN() + "%" + l.getTitolo() + "%" +l.getAnnoPubblicazione() + "%" + l.getAutore() + "%" + l.getNumeroPagine() + "%" + l.getGenere() + "#" + "\n";
+				elemento +=  "Libro: @" + l.getISBN() + "@" + l.getTitolo() + "@" +l.getAnnoPubblicazione() + "@" + l.getAutore() + "@" + l.getNumeroPagine() + "@" + l.getGenere() + "#";
 			}
 			else if(c instanceof Rivista) {
 				Rivista r = (Rivista) c;
-				elemento += "Rivista: " + "%" + r.getISBN() + "%" + r.getTitolo() + "%" + r.getPeriodicita() + "%" + r.getNumeroPagine() + "%" + r.getAnnoPubblicazione() + "#" + "\n";				
+				elemento += "Rivista: @" + r.getISBN() + "@" + r.getTitolo() + "@" + r.getAnnoPubblicazione() + "@" + r.getNumeroPagine() + "@" + r.getPeriodicita() + "#";				
 			}
 		}
 		FileUtils.writeStringToFile(file, elemento, "UTF-8");
@@ -151,24 +169,24 @@ public class Main {
 	}
 	
 	public static Set<Catalogo> caricaDaDisco() throws IOException {
-		listaCatalogo.clear();
+		Set<Catalogo> listaCatalogoAggiornata = new HashSet<>();
 		String archivio = FileUtils.readFileToString(file, "UTF-8");
-		System.out.println(archivio);
 		List<String> splittedCatalogo = Arrays.asList(archivio.split("#"));
-		System.out.println(splittedCatalogo);
+		
 		for(String e : splittedCatalogo) {
-			String[] partial = e.split("%");
-			if(partial[0] == "Libro:") {
-				Libro elemento = new Libro(partial[1], partial[2], Year.of(Integer.parseInt(partial[3])), Integer.parseInt(partial[4]), partial[5], Genere.valueOf(partial[6]));	
-				listaCatalogo.add(elemento);
+			String[] partial = e.split("@");
+			
+			if(partial[0].equals("Libro: ")) {
+				listaCatalogoAggiornata.add(new Libro(partial[1], partial[2], Year.of(Integer.parseInt(partial[3])), Integer.parseInt(partial[5]), partial[4], Genere.valueOf(partial[6]))) ;	
 			}
-			else if(partial[0] == "Rivista:") {
+			else if(partial[0].equals("Rivista: ")) {
 				Rivista elemento = new Rivista(partial[1], partial[2], Year.of(Integer.parseInt(partial[3])), Integer.parseInt(partial[4]), Periodicita.valueOf(partial[5]));
-				listaCatalogo.add(elemento);
+				listaCatalogoAggiornata.add(elemento);
 			}
 		}
-		
-		return listaCatalogo;
+		System.out.println("********** ARCHIVIO LETTO DA DISCO *********");
+		System.out.println(listaCatalogoAggiornata);
+		return listaCatalogoAggiornata;
 	}
 	
 }
