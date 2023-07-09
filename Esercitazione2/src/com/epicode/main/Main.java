@@ -138,24 +138,37 @@ public class Main {
 		String elemento = "";
 		for(Catalogo c : listaCatalogo) {
 			if(c instanceof Libro) {
-				elemento +=  c.getISBN() + "%" + c.getTitolo() + "%" + c.getNumeroPagine() + "%" + c.getAnnoPubblicazione() + "#" + "\n";
+				Libro l = (Libro) c;
+				elemento +=  "Libro: " + "%" + l.getISBN() + "%" + l.getTitolo() + "%" +l.getAnnoPubblicazione() + "%" + l.getAutore() + "%" + l.getNumeroPagine() + "%" + l.getGenere() + "#" + "\n";
 			}
 			else if(c instanceof Rivista) {
-				elemento += c.getISBN() + "%" + c.getTitolo() + "%" + c.getNumeroPagine() + "%" + c.getAnnoPubblicazione() + "#" + "\n";				
+				Rivista r = (Rivista) c;
+				elemento += "Rivista: " + "%" + r.getISBN() + "%" + r.getTitolo() + "%" + r.getPeriodicita() + "%" + r.getNumeroPagine() + "%" + r.getAnnoPubblicazione() + "#" + "\n";				
 			}
 		}
 		FileUtils.writeStringToFile(file, elemento, "UTF-8");
 		log.info("Archivio aggiornato su file " + file.getPath());
 	}
 	
-	public static List<Catalogo> caricaDaDisco() throws IOException {
+	public static Set<Catalogo> caricaDaDisco() throws IOException {
+		listaCatalogo.clear();
 		String archivio = FileUtils.readFileToString(file, "UTF-8");
 		System.out.println(archivio);
 		List<String> splittedCatalogo = Arrays.asList(archivio.split("#"));
 		System.out.println(splittedCatalogo);
+		for(String e : splittedCatalogo) {
+			String[] partial = e.split("%");
+			if(partial[0] == "Libro:") {
+				Libro elemento = new Libro(partial[1], partial[2], Year.of(Integer.parseInt(partial[3])), Integer.parseInt(partial[4]), partial[5], Genere.valueOf(partial[6]));	
+				listaCatalogo.add(elemento);
+			}
+			else if(partial[0] == "Rivista:") {
+				Rivista elemento = new Rivista(partial[1], partial[2], Year.of(Integer.parseInt(partial[3])), Integer.parseInt(partial[4]), Periodicita.valueOf(partial[5]));
+				listaCatalogo.add(elemento);
+			}
+		}
 		
-		return null;
-		//no array
+		return listaCatalogo;
 	}
 	
 }

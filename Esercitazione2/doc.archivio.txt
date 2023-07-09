@@ -1,5 +1,5 @@
-00-11-44-C%National Geographic%129%2017#
-00-11-55-D%Focus%145%2014#
-00-11-22-A%The Hobbit%1200%1960#
-00-11-77-F%the Lord of the Rings%1100%1970#
-00-11-66-E%Rolling Stone%115%2017#
+Rivista: %00-11-44-C%National Geographic%MENSILE%129%2017#
+Rivista: %00-11-55-D%Focus%SETTIMANALE%145%2014#
+Libro: %00-11-22-A%The Hobbit%1960%JRR Tolkien%1200%FANTASY#
+Libro: %00-11-77-F%the Lord of the Rings%1970%JRR Tolkien%1100%FANTASY#
+Rivista: %00-11-66-E%Rolling Stone%SETTIMANALE%115%2017#
