@@ -2,10 +2,14 @@ package com.epicode.jdbc;
 
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
 
 	public static void main(String[] args)  {
+		
+		
 		
 		try {
 			DbConnection db = new DbConnection();
@@ -20,8 +24,11 @@ public class Main {
 			db.inserisciStudente(s3);
 			db.inserisciStudente(s4);
 			
+			db.getAllStudents();
+			System.out.println("" + DbConnection.mStudenti);
+			
 			s2.setCognome("Cambiato");
-			db.modificaStudente(s2);
+			db.modificaStudente("2", DbConnection.mStudenti);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
