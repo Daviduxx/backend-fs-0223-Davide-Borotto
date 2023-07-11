@@ -48,5 +48,21 @@ public class DbConnection {
 		state.executeUpdate(sql);
 		log.info("Aggiunto studente: "+ s.getNome() + " " + s.getCognome());
 	}
+	
+	public void modificaStudente(Studente s) throws SQLException {
+		String sql = "UPDATE school_students SET "
+				   + " name = '" + s.getNome() + "', "
+				   + " lastname = '" + s.getCognome() + "', "
+				   + " gender = '" + s.getGender() + "', "
+				   + " bithday = '" + s.getBirthday() + "', "
+				   + " avg  = '"+s.getAvg()+"', "
+				   + " min_vote = '"+s.getMin_vote()+"', "
+				   + " max_vote = '"+s.getMax_vote()+"', "
+				   + " WHERE id = " + s.getId();
+		state.executeUpdate(sql);
+		log.info(s.getCognome() + " " + s.getNome() + " aggiornato!");
+	}
 
 }
+
+	

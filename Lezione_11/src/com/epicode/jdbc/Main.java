@@ -16,6 +16,12 @@ public class Main {
 			Studente s4 = new Studente("Giovanna", "Blu", "f", LocalDate.of(1997,3,27), 9, 7, 10);
 			
 			db.inserisciStudente(s1);
+			db.inserisciStudente(s2);
+			db.inserisciStudente(s3);
+			db.inserisciStudente(s4);
+			
+			s2.setCognome("Cambiato");
+			db.modificaStudente(s2);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
