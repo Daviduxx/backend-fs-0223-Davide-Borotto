@@ -6,16 +6,20 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import utils.JpaUtil;
+
 public class EventoDAO {
 		
 	static EntityManagerFactory emf = Persistence.createEntityManagerFactory("Lezione_12");
 	static EntityManager em = emf.createEntityManager();
 	
-	public void save(Evento e) {
-		em.getTransaction().begin();
-		em.persist(e);
-		em.getTransaction().commit();
-		System.out.println("Evento salvato!");
+	public void save(Evento e) {	
+			em.getTransaction().begin();
+			em.persist(e);
+			em.getTransaction().commit();
+			System.out.println("Evento salvato!");
+		
+		
 	}
 	public Evento getById(Long id) {
 		em.getTransaction().begin();
