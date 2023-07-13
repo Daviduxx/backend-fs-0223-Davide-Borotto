@@ -3,13 +3,19 @@ package com.epicode.model;
 import java.time.LocalDate;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import enumeration.Type;
@@ -32,9 +38,11 @@ public class Evento {
 	private Type tipoEvento;
 	@Column(name = "max_partecipanti")
 	private Integer numeroMassimoPartecipanti;
-	@Column(name = "partecipazione", nullable = true)
+	
+	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private Set<Partecipazione> partecipazione;
-	@Column(name = "location", nullable = false)
+	
+	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private Location location;
 	
 	
@@ -63,8 +71,18 @@ public class Evento {
 		this.descrizione = descrizione;
 		this.tipoEvento = tipoEvento;
 		this.numeroMassimoPartecipanti = numeroMassimoPartecipanti;
-		this.partecipazione = partecipazione;
+		this.setPartecipazione(partecipazione);
 		this.location = location;
+	}
+
+
+	public Set<Partecipazione> getPartecipazione() {
+		return partecipazione;
+	}
+
+
+	public void setPartecipazione(Set<Partecipazione> partecipazione) {
+		this.partecipazione = partecipazione;
 	}
 
 }

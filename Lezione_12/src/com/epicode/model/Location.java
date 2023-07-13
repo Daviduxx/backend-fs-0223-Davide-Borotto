@@ -18,5 +18,5 @@ public class Location {
 	private String nome;
 	@Column(name = "citta", nullable = false)
 	private String citta;
-
+	
 }
