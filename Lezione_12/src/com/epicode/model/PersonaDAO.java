@@ -4,36 +4,54 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import utils.JpaUtil;
+
 public class PersonaDAO {
 	
-	static EntityManagerFactory emf = Persistence.createEntityManagerFactory("Lezione_12");
-	static EntityManager em = emf.createEntityManager();
-	
 	public void save(Persona p) {	
-		em.getTransaction().begin();
-		em.persist(p);
-		em.getTransaction().commit();
-		System.out.println("Persona Salvata");
-	
-	
-}
-    public Persona getById(Long id) {
-		em.getTransaction().begin();
-		Persona p = em.find(Persona.class, id);
-		em.getTransaction().commit();
-		System.out.println("Persona trovata");
-		return p;
-}
-
-	public void delete(Persona p) {
-		em.getTransaction().begin();
-		em.remove(p);
-		em.getTransaction().commit();
-		System.out.println("Persona eliminata");
-}
-
-	public void refresh(Persona p) {
-		em.refresh(p);
+		EntityManager em = JpaUtil.getEntityManagerFactory().createEntityManager();
+		try {
+			em.getTransaction().begin();
+			em.persist(p);
+			em.getTransaction().commit();
+		} catch (Exception ex) {
+			em.getTransaction().rollback();
+			ex.getMessage();
+		} finally {
+			em.close();
+		}
 	}
-
+	
+	public void refresh(Persona p) {
+		EntityManager em = JpaUtil.getEntityManagerFactory().createEntityManager();
+		try {
+			em.refresh(p);
+		} finally {
+			em.close();
+		}
+	}
+	
+	public Persona getById(Long id) {
+		EntityManager em = JpaUtil.getEntityManagerFactory().createEntityManager();
+		try {
+			return em.find(Persona.class, id);
+		} finally {
+			em.close();
+		}
+	}
+	
+	public void delete(Persona p) {
+		EntityManager em = JpaUtil.getEntityManagerFactory().createEntityManager();
+		try {
+			em.getTransaction().begin();
+			em.remove(p);
+			em.getTransaction().commit();
+		} catch (Exception ex) {
+			em.getTransaction().rollback();
+			ex.getMessage();
+		} finally {
+			em.close();
+		}
+	}
+	
 }

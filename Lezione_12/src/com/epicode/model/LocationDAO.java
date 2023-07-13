@@ -1,5 +1,7 @@
 package com.epicode.model;
 
+import java.sql.SQLException;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -8,33 +10,51 @@ import utils.JpaUtil;
 
 public class LocationDAO {
 	
-	static EntityManagerFactory emf = Persistence.createEntityManagerFactory("Lezione_12");
-	static EntityManager em = emf.createEntityManager();
-	
 	public void save(Location l) {	
-		em.getTransaction().begin();
-		em.persist(l);
-		em.getTransaction().commit();
-		System.out.println("Location Salvata");
-	
-	
-}
-    public Location getById(Long id) {
-		em.getTransaction().begin();
-		Location l = em.find(Location.class, id);
-		em.getTransaction().commit();
-		System.out.println("Location trovata");
-		return l;
-}
-
-	public void delete(Location l) {
-		em.getTransaction().begin();
-		em.remove(l);
-		em.getTransaction().commit();
-		System.out.println("Location eliminata");
-}
-
-	public void refresh(Location l) {
-		em.refresh(l);
+		EntityManager em = JpaUtil.getEntityManagerFactory().createEntityManager();
+		try {
+			em.getTransaction().begin();
+			em.persist(l);
+			em.getTransaction().commit();
+		} catch (Exception ex) {
+			em.getTransaction().rollback();
+			ex.getMessage();
+		} finally {
+			em.close();
+		}
 	}
+	
+	public void refresh(Location l) {
+		EntityManager em = JpaUtil.getEntityManagerFactory().createEntityManager();
+		try {
+			em.refresh(l);
+		} finally {
+			em.close();
+		}
+	}
+	
+	public Location getById(Long id) {
+		EntityManager em = JpaUtil.getEntityManagerFactory().createEntityManager();
+		try {
+			return em.find(Location.class, id);
+		} finally {
+			em.close();
+		}
+	}
+	
+	public void delete(Location l) {
+		EntityManager em = JpaUtil.getEntityManagerFactory().createEntityManager();
+		try {
+			em.getTransaction().begin();
+			em.remove(l);
+			em.getTransaction().commit();
+		} catch (Exception ex) {
+			em.getTransaction().rollback();
+			ex.getMessage();
+		} finally {
+			em.close();
+		}
+	}
+	
+	
 }

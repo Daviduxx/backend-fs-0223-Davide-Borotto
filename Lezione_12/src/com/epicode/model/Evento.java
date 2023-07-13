@@ -12,6 +12,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
@@ -22,6 +24,7 @@ import enumeration.Type;
 
 @Entity
 @Table(name = "eventi")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Evento {
 	
 	@Id
@@ -39,10 +42,10 @@ public class Evento {
 	@Column(name = "max_partecipanti")
 	private Integer numeroMassimoPartecipanti;
 	
-	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "evento", cascade = CascadeType.REMOVE)
 	private Set<Partecipazione> partecipazione;
 	
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@ManyToOne
 	private Location location;
 	
 	
@@ -76,6 +79,66 @@ public class Evento {
 	}
 
 
+	public Long getId() {
+		return id;
+	}
+
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
+	public String getTitolo() {
+		return titolo;
+	}
+
+
+	public void setTitolo(String titolo) {
+		this.titolo = titolo;
+	}
+
+
+	public LocalDate getDataEvento() {
+		return dataEvento;
+	}
+
+
+	public void setDataEvento(LocalDate dataEvento) {
+		this.dataEvento = dataEvento;
+	}
+
+
+	public String getDescrizione() {
+		return descrizione;
+	}
+
+
+	public void setDescrizione(String descrizione) {
+		this.descrizione = descrizione;
+	}
+
+
+	public Type getTipoEvento() {
+		return tipoEvento;
+	}
+
+
+	public void setTipoEvento(Type tipoEvento) {
+		this.tipoEvento = tipoEvento;
+	}
+
+
+	public Integer getNumeroMassimoPartecipanti() {
+		return numeroMassimoPartecipanti;
+	}
+
+
+	public void setNumeroMassimoPartecipanti(Integer numeroMassimoPartecipanti) {
+		this.numeroMassimoPartecipanti = numeroMassimoPartecipanti;
+	}
+
+
 	public Set<Partecipazione> getPartecipazione() {
 		return partecipazione;
 	}
@@ -84,5 +147,18 @@ public class Evento {
 	public void setPartecipazione(Set<Partecipazione> partecipazione) {
 		this.partecipazione = partecipazione;
 	}
+
+
+	public Location getLocation() {
+		return location;
+	}
+
+
+	public void setLocation(Location location) {
+		this.location = location;
+	}
+
+
+	
 
 }
