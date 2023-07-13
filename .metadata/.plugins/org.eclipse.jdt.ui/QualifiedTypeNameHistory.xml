@@ -45,9 +45,13 @@
     <fullyQualifiedTypeName name="cmo.epicode.model.Evento"/>
     <fullyQualifiedTypeName name="enumeriation.Type"/>
     <fullyQualifiedTypeName name="cmo.epicode.model.EventoDAO"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
-    <fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
     <fullyQualifiedTypeName name="javax.persistence.Persistence"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+    <fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
+    <fullyQualifiedTypeName name="enumeration.Type"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="com.epicode.model.Evento"/>
+    <fullyQualifiedTypeName name="com.epicode.model.EventoDAO"/>
+    <fullyQualifiedTypeName name="utils.JpaUtil"/>
 </qualifiedTypeNameHistroy>
