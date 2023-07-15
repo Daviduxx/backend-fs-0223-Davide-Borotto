@@ -1,12 +1,9 @@
 package com.epicode.model;
 
-import java.sql.SQLException;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
-import utils.JpaUtil;
+import util.JpaUtil;
 
 public class EventoDAO {
 		
@@ -53,8 +50,10 @@ public class EventoDAO {
 		} catch (Exception ex) {
 			em.getTransaction().rollback();
 			ex.getMessage();
+			System.err.println("errore");
 		} finally {
 			em.close();
+			System.err.println("chiuso");
 		}
 	}
 	

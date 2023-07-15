@@ -20,11 +20,11 @@ public class Partecipazione {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Column(name = "persona", nullable = false) // aghgiungere relazione may to one
+	
 	@ManyToOne
 	private Persona persona;
 	@ManyToOne
-	@Column(name = "evento", nullable = false) // aggiungere relazione many to oNE
+	
 	private Evento evento;
 	@Enumerated(EnumType.STRING)
 	@Column(name = "stato", nullable = false)

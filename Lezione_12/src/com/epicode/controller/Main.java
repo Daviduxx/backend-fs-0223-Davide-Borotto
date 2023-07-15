@@ -28,7 +28,7 @@ public class Main {
 		Evento e1 = creaEvento(loc1);
 		Persona p1 = creaPersona();
 		Partecipazione part1 = creaPartecipazione(e1, p1);
-		
+		System.err.println("chiuso");
 	}
 	
 	public static Partecipazione creaPartecipazione(Evento evento, Persona persona) {
@@ -49,6 +49,8 @@ public class Main {
 		evento.setTipoEvento(Type.PUBBLICO);
 		evento.setNumeroMassimoPartecipanti(20000);
 		evento.setLocation(loc);
+		EventoDAO eDAO = new EventoDAO();
+		eDAO.save(evento);
 		return evento;
 	}
 	
