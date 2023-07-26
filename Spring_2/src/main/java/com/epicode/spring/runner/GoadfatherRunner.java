@@ -5,6 +5,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.stereotype.Component;
 
 import classes.Menu;
+import classes.Ordine;
 import configuration.GodfatherConfiguration;
 
 @Component 
@@ -16,6 +17,7 @@ public class GoadfatherRunner implements CommandLineRunner{
 		
 		AnnotationConfigApplicationContext appContext = new AnnotationConfigApplicationContext(GodfatherConfiguration.class);
 		Menu menu = (Menu) appContext.getBean("menuPizzaConfig");
+		Ordine o1 = (Ordine) appContext.getBean("creaOrdine");
 		
 		System.out.println();
 		System.out.println("------------GODFATHER PIZZA------------");
@@ -33,6 +35,20 @@ public class GoadfatherRunner implements CommandLineRunner{
 		System.out.println();
 		
 		menu.getMenuFranchise().forEach(f -> System.out.println(f.getMenuLine()));
+		
+		System.out.println();
+		System.out.println("------------ORDINI------------");
+		System.out.println();
+		
+		o1.addItemMenu(menu.getMenuDrink().get(1));
+		o1.addItemMenu(menu.getMenuDrink().get(1));
+		o1.addItemMenu(menu.getMenuPizze().get(2));
+		o1.addItemMenu(menu.getMenuFranchise().get(0));
+		
+		System.out.println(o1.mostraOrdine());
+		o1.getTotale();
+		
+		appContext.close();
 	}
 
 }

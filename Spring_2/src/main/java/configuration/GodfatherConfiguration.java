@@ -1,20 +1,40 @@
 package configuration;
 
+import java.time.LocalTime;
+import java.util.Map;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
+import classes.Elemento;
 import classes.Franchise;
 import classes.Hawaian;
 import classes.Lemonade;
 import classes.Margherita;
 import classes.Menu;
+import classes.Ordine;
 import classes.Salami;
+import classes.StatoOrdine;
 import classes.Water;
 import classes.Wine;
 
 @Configuration
 public class GodfatherConfiguration {
+	
+	@Bean
+	@Scope("prototype")
+	public Ordine creaOrdine() {
+		Ordine o1 = new Ordine();
+		
+		o1.setCostoCoperto(1.5);
+		o1.setNumCoperti(5);
+		o1.setNumeroOrdine(10);
+		o1.setOra(LocalTime.of(12, 34));
+		o1.setStato(StatoOrdine.IN_CORSO);
+		return o1;
+	}
+	
 	
 	@Bean
 	@Scope("singleton")
