@@ -103,3 +103,12 @@ nb-configuration.xml
 ## OS X
 ##############################
 .DS_Store
+.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt
+.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt
+.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt
+.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat
+*.xml
+*.cmd
+Spring_2-1/mvnw
+*.ser
+*.dat
