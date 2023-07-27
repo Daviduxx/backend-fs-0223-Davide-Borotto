@@ -6,6 +6,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.stereotype.Component;
 
 import com.epicode.spring.config.GodfatherConfiguration;
+import com.epicode.spring.model.Elemento;
 import com.epicode.spring.model.Margherita;
 import com.epicode.spring.model.Menu;
 import com.epicode.spring.model.Ordine;
@@ -75,14 +76,32 @@ public class GoadfatherRunner implements CommandLineRunner{
 		
 		//commento perche al momento mi interessa solamente creare le tabelle
 		
-		Margherita m1 = svc.creaMaegherita();
+		//Margherita m1 = svc.creaMaegherita();
 		//Margherita m2 = svc.creaMaegherita();
-		System.out.println("Pizza creata: " + m1.getMenuLine());
-		svc.salvaElemento(m1);
+		//System.out.println("Pizza creata: " + m1.getMenuLine());
+		//svc.salvaElemento(m1);
 		//svc.salvaPizza(m2);
 		
-		Salami s1 = svc.creaSalami();
-		svc.salvaElemento(s1);
+		//Salami s1 = svc.creaSalami();
+		//svc.salvaElemento(s1);
+		
+		// questo metodo mi va a salvare sul db tutto il menu
+		svc.creaMenu();
+		
+		//trova tutto
+		svc.findAll();
+		
+		//get singola
+		Elemento evil = svc.findById(3L);
+		Elemento vino = svc.findById(6L);
+		
+		//modifico per poi testare il metodo update
+		vino.setPrice(10);
+		
+		//rimuove elemento
+		svc.remove(evil);
+		
+		svc.update(vino);
 	}
 
 }

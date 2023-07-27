@@ -55,7 +55,7 @@ public class GodfatherConfiguration {
 	}
 	
 	
-	@Bean
+	@Bean("creaMenu")
 	@Scope("singleton")
 	public Menu menuPizzaConfig() {
 		Menu m = new Menu();
