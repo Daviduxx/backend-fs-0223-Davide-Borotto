@@ -3,8 +3,10 @@ package com.epicode.spring.config;
 import java.time.LocalTime;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.Scope;
 
 import com.epicode.spring.model.Franchise;
@@ -14,25 +16,42 @@ import com.epicode.spring.model.Margherita;
 import com.epicode.spring.model.Menu;
 import com.epicode.spring.model.Ordine;
 import com.epicode.spring.model.Salami;
+import com.epicode.spring.model.Stato;
 import com.epicode.spring.model.StatoOrdine;
+import com.epicode.spring.model.Tavolo;
 import com.epicode.spring.model.Water;
 import com.epicode.spring.model.Wine;
 
 
+
 @Configuration
+@PropertySource("classpath:application.properties")
 public class GodfatherConfiguration {
+	
+	
+	@Value("${ordine.costocoperto}") private double costoCoperto;
 	
 	@Bean
 	@Scope("prototype")
-	public Ordine creaOrdine() {
+	public Ordine creaOrdine(int numCoperti, int numeroOrdine, Tavolo tavolo) {
 		Ordine o1 = new Ordine();
-		
-		o1.setCostoCoperto(1.5);
-		o1.setNumCoperti(5);
-		o1.setNumeroOrdine(10);
-		o1.setOra(LocalTime.of(12, 34));
+		o1.setCostoCoperto(costoCoperto);
+		o1.setNumCoperti(numCoperti);
+		o1.setNumeroOrdine(numeroOrdine);
+		o1.setOra(LocalTime.now());
 		o1.setStato(StatoOrdine.IN_CORSO);
+		o1.setTavolo(tavolo);
 		return o1;
+	}
+	
+	@Bean
+	@Scope("prototype")
+	public Tavolo creaTavoloConfig(int numero, int numCoperti) {
+		Tavolo t1 = new Tavolo();
+		t1.setNumero(numero);
+		t1.setMaxCoperti(numCoperti);
+		t1.setStato(Stato.LIBERO);
+		return t1;
 	}
 	
 	

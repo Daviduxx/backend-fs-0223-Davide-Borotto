@@ -9,11 +9,13 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
+@ToString
 public class Ordine {
 	
 	private int numeroOrdine;
@@ -21,6 +23,7 @@ public class Ordine {
 	private int numCoperti;
 	private LocalTime ora;
 	private double costoCoperto;
+	private Tavolo tavolo;
 	private Map<Elemento, Integer> ordinato = new HashMap<Elemento, Integer>();
 	
 	public void addItemMenu(Elemento item) {
@@ -30,6 +33,7 @@ public class Ordine {
 			ordinato.put(item, ordinato.get(item) + 1);
 		}
 		System.out.println(item + " aggiunto all'ordine");
+		
 	}
 	
 	public String mostraOrdine() {

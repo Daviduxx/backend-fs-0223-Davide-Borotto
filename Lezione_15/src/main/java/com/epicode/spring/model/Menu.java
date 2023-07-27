@@ -9,7 +9,8 @@ public class Menu {
 	private List<Drink> menuDrink = new ArrayList<Drink>();
 	private List<Franchise> menuFranchise = new ArrayList<Franchise>();
 	
-
+	
+	// con lombok è possibile sostituire tutti questi metodi da annotazioni
 	public List<Pizza> getMenuPizze() {
 		return menuPizze;
 	}
