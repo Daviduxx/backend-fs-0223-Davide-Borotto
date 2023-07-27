@@ -6087,3 +6087,173 @@ java.lang.InterruptedException
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 16:46:02.593
 !MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.eclipse.ui 4 0 2023-07-27 16:50:22.141
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.swt.widgets.Display.filters(int)" because "this.display" is null
+	at org.eclipse.swt.widgets.Widget.filters(Widget.java:831)
+	at org.eclipse.swt.widgets.Control.scrollWheel(Control.java:2567)
+	at org.eclipse.swt.widgets.Link.scrollWheel(Link.java:595)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6452)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Widget.callSuper(Widget.java:236)
+	at org.eclipse.swt.widgets.Widget.windowSendEvent(Widget.java:2264)
+	at org.eclipse.swt.widgets.Shell.windowSendEvent(Shell.java:2511)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6444)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Display.applicationSendEvent(Display.java:5692)
+	at org.eclipse.swt.widgets.Display.applicationProc(Display.java:5831)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSApplication.sendEvent(NSApplication.java:117)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3986)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 16:50:32.548
+!MESSAGE Classpath changed for project: Lezione_15
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 16:50:34.269
+!MESSAGE Classpath changed for project: Lezione_15
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 16:51:34.683
+!MESSAGE Classpath changed for project: Lezione_15
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 16:52:00.771
+!MESSAGE Classpath changed for project: Lezione_15
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-07-27 16:55:20.254
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 16:55:24.689
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 16:56:57.784
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 16:57:43.944
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:00:08.672
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:00:29.081
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:03:46.992
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:06:33.378
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:07:56.754
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:08:35.843
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:10:25.927
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:11:08.964
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:11:27.060
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:12:46.832
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:13:13.388
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:14:28.527
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:16:32.312
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:20:04.920
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-07-27 17:20:54.499
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:21:07.194
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:21:46.079
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:22:33.573
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:32:43.398
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:33:17.771
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:33:25.237
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:33:38.613
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:33:47.487
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:33:58.524
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:35:09.930
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:35:29.769
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:35:49.178
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:42:24.350
+!MESSAGE Classpath changed for project: Lezione_16
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:42:49.121
+!MESSAGE Classpath changed for project: Lezione_16

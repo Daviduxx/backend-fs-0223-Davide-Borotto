@@ -72,13 +72,13 @@ public class GodfatherConfiguration {
 		return m;
 	}
 	
-	@Bean
+	@Bean("creaMargherita")
 	@Scope("singleton")
 	public Margherita margherita() {
 		return new Margherita();
 	}
 	
-	@Bean
+	@Bean("creaSalami")
 	@Scope("singleton")
 	public Salami salami() {
 		return new Salami();

@@ -1,6 +1,5 @@
 INDEX VERSION 1.134+/Users/davideborottodallavecchia/Documents/DEV/EPICODE/Backend/epicode-workspace/.metadata/.plugins/org.eclipse.jdt.core
 2111195539.index
-1920001378.index
 542555795.index
 3749679374.index
 4255180002.index
@@ -56,7 +55,6 @@ INDEX VERSION 1.134+/Users/davideborottodallavecchia/Documents/DEV/EPICODE/Backe
 3274088855.index
 374576732.index
 1591159112.index
-2692455249.index
 1037928874.index
 1143444377.index
 3475298167.index
