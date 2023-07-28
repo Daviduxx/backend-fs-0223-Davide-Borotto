@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -24,7 +25,7 @@ public class Edificio {
 	private String name;
 	private String indirizzo;
 	private String citta;
-	@OneToMany
+	@OneToMany(fetch = FetchType.EAGER)
 	private Set<Postazione> postazione = new HashSet<Postazione>();
 
 }

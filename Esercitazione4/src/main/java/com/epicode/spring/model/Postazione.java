@@ -6,6 +6,7 @@ import java.util.Set;
 import com.epicode.spring.enumerations.Tipo;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -32,7 +33,7 @@ public class Postazione {
 	@ManyToOne
 	private Edificio edificio;
 	private boolean libera = true;
-	@OneToMany
+	@OneToMany(fetch = FetchType.EAGER)
 	private Set<Prenotazione> prenotazione = new HashSet<Prenotazione>();
 
 }

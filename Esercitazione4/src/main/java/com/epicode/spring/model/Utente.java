@@ -1,9 +1,11 @@
 package com.epicode.spring.model;
 
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -24,7 +26,9 @@ public class Utente {
 	private String userName;
 	private String fullName;
 	private String email;
-	@OneToMany
+	@OneToMany(fetch = FetchType.EAGER)
 	private Set<Prenotazione> prenotazioni = new HashSet<Prenotazione>();
+	
+	
 
 }

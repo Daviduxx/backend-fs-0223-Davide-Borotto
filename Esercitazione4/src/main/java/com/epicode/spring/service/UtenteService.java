@@ -1,5 +1,7 @@
 package com.epicode.spring.service;
 
+import java.util.Set;
+
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -31,13 +33,16 @@ public class UtenteService {
 		return utenteRepo.findById(id).get();
 	}
 	
-	public void aggiungiPrenotazione(Utente u, Prenotazione prenotazione) {
-		if(u.getPrenotazioni().size() == 0) {
-			u.getPrenotazioni().add(prenotazione);
-			utenteRepo.save(u);
-			System.out.println("Prenotazione aggiunta!");
-		} else {
-			
-		}
-	}
+//	public void aggiungiPrenotazione(Utente u, Prenotazione prenotazione) {
+//		Set<Prenotazione> prenotazioni = u.getPrenotazioni();
+//		prenotazioni.forEach(p -> {
+//			if(p.getGiornoPrenotazione().equals(prenotazione.getGiornoPrenotazione())) {
+//				 System.out.println("Hai già una prenotazione per questa data");
+//			} else {
+//				u.getPrenotazioni().add(prenotazione);
+//				utenteRepo.save(u);
+//				System.out.println("Prenotazione aggiunta!");
+//			}
+//		});
+//	}
 }

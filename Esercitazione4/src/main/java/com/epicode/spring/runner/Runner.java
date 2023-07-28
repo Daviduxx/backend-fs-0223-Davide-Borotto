@@ -83,8 +83,8 @@ public class Runner implements CommandLineRunner{
 		//modifica delle postazioni
 //		Edificio ed1 = ediSvc.trovaEdificio(1L);
 //		Edificio ed2 = ediSvc.trovaEdificio(2L);
-		Postazione upUpdate = postSvc.trovaPostazione(2l);
-	
+		Postazione upUpdate = postSvc.trovaPostazione(1l);
+		Postazione post2 = postSvc.trovaPostazione(4l);
 		//postSvc.aggiornaPostazione(p1);
 		//postSvc.aggiornaPostazione(p2);
 		
@@ -111,8 +111,11 @@ public class Runner implements CommandLineRunner{
 		System.out.println("************* CREAZIONE PRENOTAZIONI ************");
 		System.out.println();
 		
-		Prenotazione pre1 = preSvc.creaPrenotazione(LocalDate.of(2023, 7, 29), uSvc.findUtente(3L), postazioniTrovate.get(0));
-//		Prenotazione pre2 = preSvc.creaPrenotazione(LocalDate.of(2023, 8, 2), u2, p3);
+		Utente ut1 = uSvc.findUtente(3l);
+		
+		
+		Prenotazione pre1 = preSvc.creaPrenotazione(LocalDate.of(2023, 10, 29), ut1, upUpdate);
+		Prenotazione pre2 = preSvc.creaPrenotazione(LocalDate.of(2023, 8, 2), ut1, post2);
 //		Prenotazione pre3 = preSvc.creaPrenotazione(LocalDate.of(2023, 8, 5), u1, p1);
 		
 //		preSvc.salvaPrenotazione(pre1);

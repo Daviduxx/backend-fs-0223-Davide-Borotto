@@ -1,6 +1,7 @@
 package com.epicode.spring.service;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,19 +23,30 @@ public class PrenotazioneService {
 	@Autowired @Qualifier("prenotazione") private ObjectProvider<Prenotazione> prenotazioneProvider;
 	
 	public Prenotazione creaPrenotazione(LocalDate giorno, Utente u, Postazione postazione) {
-		Prenotazione p = prenotazioneProvider.getObject();
-		if(postazione.isLibera()) {
-			p.setGiornoPrenotazione(giorno);
-			p.setUtente(u);
-			p.setPostazione(postazione);
-			postazione.setLibera(false);
-			postRepo.save(postazione);
-			System.out.println("Prenotazione del " + p.getGiornoPrenotazione() + " salvata creata");
-		} else {
-			System.out.println("Questa postazione è già occupata da un altro utente per il giorno indicato");
-		}
-		return p;			
-	}
+		Prenotazione pre = prenotazioneProvider.getObject();
+		Set<Prenotazione> prenotazioni = u.getPrenotazioni();
+		prenotazioni.forEach(pren -> {
+			if(pren.getGiornoPrenotazione().equals(giorno)) {
+				 System.out.println("Hai già una prenotazione per questa data");
+			} 
+		});
+			if(!postazione.isLibera()){
+				System.out.println("Questa postazione è già occupata da un altro utente per il giorno indicato");
+			} 	
+			else {
+				pre.setGiornoPrenotazione(giorno);
+				pre.setUtente(u);
+				pre.setPostazione(postazione);
+				u.getPrenotazioni().add(pre);
+				preRepo.save(pre);
+				postazione.setLibera(false);
+				postRepo.save(postazione);
+				System.out.println("Prenotazione del " + pre.getGiornoPrenotazione() + " salvata!");
+			}
+			System.out.println("works");
+			return pre;
+		};
+		
 	
 	public void salvaPrenotazione(Prenotazione p) {
 		preRepo.save(p);
