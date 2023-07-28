@@ -40,12 +40,25 @@ public class PostazioneService {
 		System.out.println("Postazione salvata nel db!");
 	}
 	
-	public List<Postazione> findAll(){
-		
-		return (List<Postazione>) postRepo.findAll();
-		//postazioni.forEach(p -> postazioni.add(p));
-		//postazioni.forEach(p -> System.out.println("ID postazione: " + p.getId() + " " + p.getDescrizione() + "città: " + p.getTipo()));
-		//System.out.println(postazioni);
-		
+	public void aggiornaPostazione(Postazione p) {
+		postRepo.save(p);
+		System.out.println("POstazione numero: " + p.getId() + " modificata.");
 	}
+	
+	public List<Postazione> findAll(){
+		return (List<Postazione>) postRepo.findAll();
+	}
+	
+	public List<Postazione> trovaPerCittaETipo(String citta, Tipo tipo){
+		List<Postazione> postazioniTrovate = postRepo.findPostazion(tipo, citta);
+		if(postazioniTrovate.size() != 0) {
+			System.out.println("Ho trovato le seguenti postazioni con i parametri da te richiesti");
+			postazioniTrovate.forEach(p -> System.out.println("ID postazione: " + p.getId()));
+		}
+		else {
+			System.out.println("Non è stat trovata nessuna postazione con i parametri da te indicati");
+		}
+		return postazioniTrovate;
+	}
+	
 }
