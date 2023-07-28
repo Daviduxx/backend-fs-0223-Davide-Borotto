@@ -6741,3 +6741,207 @@ Binding(COMMAND+SHIFT+C,
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 10:52:21.957
 !MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 10:57:34.189
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 10:59:27.002
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 10:59:27.455
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 10:59:57.205
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:00:29.206
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:02:17.103
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:02:34.689
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:02:45.478
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:03:18.456
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:03:34.948
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:04:33.234
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:04:49.974
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:07:04.783
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:08:01.981
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:08:45.944
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-07-28 11:11:25.646
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:11:30.578
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:11:58.359
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:12:33.718
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:14:52.247
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:17:57.594
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:19:30.531
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:21:20.254
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:21:23.660
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:21:30.432
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:22:59.337
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:27:35.991
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:31:02.838
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:31:46.521
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:35:54.144
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:36:27.253
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:37:10.015
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:37:24.705
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:38:18.072
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:39:12.954
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:45:35.704
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:45:45.209
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:45:49.239
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:46:46.508
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:47:25.341
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:47:58.269
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:48:39.091
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:49:00.848
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:49:05.852
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:50:38.817
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:51:09.460
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:51:23.895
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:54:26.796
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:55:02.407
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-07-28 11:55:18.353
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:55:20.196
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:55:52.039
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:58:44.348
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:59:19.799
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 12:00:56.197
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 12:01:44.376
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 12:03:40.595
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 12:04:54.781
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 12:06:21.392
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 12:07:35.209
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 12:10:10.891
+!MESSAGE Classpath changed for project: Esercitazione4
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 12:10:55.104
+!MESSAGE Classpath changed for project: Esercitazione4
