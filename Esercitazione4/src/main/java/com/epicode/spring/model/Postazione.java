@@ -1,5 +1,6 @@
 package com.epicode.spring.model;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import com.epicode.spring.enumerations.Tipo;
@@ -32,6 +33,6 @@ public class Postazione {
 	private Edificio edificio;
 	private boolean libera = true;
 	@OneToMany
-	private Set<Prenotazione> prenotazione;
+	private Set<Prenotazione> prenotazione = new HashSet<Prenotazione>();
 
 }
