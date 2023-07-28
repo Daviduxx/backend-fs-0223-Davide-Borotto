@@ -1,29 +1,36 @@
 package com.epicode.spring.service;
 
+import java.time.LocalDate;
+
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import com.epicode.spring.model.Edificio;
-import com.epicode.spring.repository.GestioneDAO;
+import com.epicode.spring.model.Postazione;
+import com.epicode.spring.model.Prenotazione;
+import com.epicode.spring.model.Utente;
+import com.epicode.spring.repository.PrenotazioneDAO;
 
 @Service
 public class PrenotazioneService {
 	
-	@Autowired GestioneDAO edirepo;
+	@Autowired PrenotazioneDAO preRepo;
 	
-	@Autowired @Qualifier("edificio") private ObjectProvider<Edificio> edificioProvider;
+	@Autowired @Qualifier("prenotazione") private ObjectProvider<Prenotazione> prenotazioneProvider;
 	
-	public Edificio creaEdificio() {
-		Edificio e = edificioProvider.getObject();
-		System.out.println("Ho creato il seguente edificio: "  + e.getName() + " , si trova a " + e.getCitta() + " al seguente indirizzo: " + e.getIndirizzo());
-		return e;
+	public Prenotazione creaPrenotazione(LocalDate giorno, Utente u, Postazione postazione) {
+		Prenotazione p = prenotazioneProvider.getObject();
+		p.setGiornoPrenotazione(giorno);
+		p.setUtente(u);
+		p.setPostazione(postazione);
+		System.out.println("Prenotazione del " + p.getGiornoPrenotazione() + " salvata creata");
+		return p;
 	}
 	
-	public void salvaEdificio(Edificio e) {
-		edirepo.save(e);
-		System.out.println("Edificio " + e.getName() + " salvato nel database!");
+	public void salvaPrenotazione(Prenotazione p) {
+		preRepo.save(p);
+		System.out.println("Prenotazione salvata nel db");
 	}
 
 }
