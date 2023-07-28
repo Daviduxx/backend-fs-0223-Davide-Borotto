@@ -10,12 +10,14 @@ import org.springframework.stereotype.Service;
 import com.epicode.spring.model.Postazione;
 import com.epicode.spring.model.Prenotazione;
 import com.epicode.spring.model.Utente;
+import com.epicode.spring.repository.PostazioneDAO;
 import com.epicode.spring.repository.PrenotazioneDAO;
 
 @Service
 public class PrenotazioneService {
 	
 	@Autowired PrenotazioneDAO preRepo;
+	@Autowired PostazioneDAO postRepo;
 	
 	@Autowired @Qualifier("prenotazione") private ObjectProvider<Prenotazione> prenotazioneProvider;
 	
@@ -26,7 +28,10 @@ public class PrenotazioneService {
 			p.setUtente(u);
 			p.setPostazione(postazione);
 			postazione.setLibera(false);
+			postRepo.save(postazione);
 			System.out.println("Prenotazione del " + p.getGiornoPrenotazione() + " salvata creata");
+		} else {
+			System.out.println("Questa postazione è già occupata da un altro utente per il giorno indicato");
 		}
 		return p;			
 	}

@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import com.epicode.spring.model.Prenotazione;
 import com.epicode.spring.model.Utente;
 import com.epicode.spring.repository.UtenteDAO;
 
@@ -24,5 +25,19 @@ public class UtenteService {
 	public void salvaUtente(Utente u) {
 		utenteRepo.save(u);
 		System.out.println("Utente " + u.getUserName() + " salvato nel db");
+	}
+	
+	public Utente findUtente(Long id) {
+		return utenteRepo.findById(id).get();
+	}
+	
+	public void aggiungiPrenotazione(Utente u, Prenotazione prenotazione) {
+		if(u.getPrenotazioni().size() == 0) {
+			u.getPrenotazioni().add(prenotazione);
+			utenteRepo.save(u);
+			System.out.println("Prenotazione aggiunta!");
+		} else {
+			
+		}
 	}
 }
