@@ -3,6 +3,7 @@ package com.epicode.spring.service;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 import org.springframework.beans.factory.ObjectProvider;
@@ -38,6 +39,10 @@ public class PostazioneService {
 	public void salvaPostazione(Postazione p) {
 		postRepo.save(p);
 		System.out.println("Postazione salvata nel db!");
+	}
+	
+	public Postazione trovaPostazione(Long id) {
+		return postRepo.findById(id).get();
 	}
 	
 	public void aggiornaPostazione(Postazione p) {

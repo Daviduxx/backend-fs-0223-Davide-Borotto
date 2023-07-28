@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.epicode.spring.model.Edificio;
+import com.epicode.spring.model.Postazione;
 import com.epicode.spring.repository.GestioneDAO;
 
 @Service
@@ -31,6 +32,15 @@ public class EdificioService {
 	
 	public List<Edificio> trovaEdifici(){
 		return (List<Edificio>) edirepo.findAll();
+	}
+	
+	public Edificio trovaEdificio(Long id) {
+		return edirepo.findById(id).get();
+	}
+	
+	public void aggioranEdificio(Edificio e) {
+		edirepo.save(e);
+		System.out.println("Edificio numero: " + e.getId() + " modificato.");
 	}
 
 }

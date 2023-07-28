@@ -2,6 +2,7 @@ package com.epicode.spring.runner;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 import org.slf4j.Logger;
@@ -55,12 +56,17 @@ public class Runner implements CommandLineRunner{
 //		ediSvc.salvaEdificio(e2);
 //		ediSvc.salvaEdificio(e3);
 		
+		
 		System.out.println();
 		System.out.println("************* TUTTI GLI EDIFICI ************");
 		System.out.println();
 		
 		List<Edificio> edifici = ediSvc.trovaEdifici();
 		edifici.forEach(e -> System.out.println("ID edificio: " + e.getId() + " nome: " + e.getName()));
+		
+		Edificio edUp = ediSvc.trovaEdificio(1l);
+		edUp.setCitta("Torino");
+		ediSvc.aggioranEdificio(edUp);
 		
 		//creo le postazioni
 		System.out.println();
@@ -75,11 +81,10 @@ public class Runner implements CommandLineRunner{
 //		postSvc.salvaPostazione(p3);
 		
 		//modifica delle postazioni
-//		p1.getEdificio().setCitta("Torino");
-//		p2.setEdificio(e1);
-		
-		postSvc.aggiornaPostazione(p1);
-		postSvc.aggiornaPostazione(p2);
+		Postazione upUpdate = postSvc.trovaPostazione(2l);
+	
+		//postSvc.aggiornaPostazione(p1);
+		//postSvc.aggiornaPostazione(p2);
 		
 		System.out.println();
 		System.out.println("************* RICERCA POSTAZIONI DELL'UTENTE ************");
