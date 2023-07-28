@@ -21,11 +21,14 @@ public class PrenotazioneService {
 	
 	public Prenotazione creaPrenotazione(LocalDate giorno, Utente u, Postazione postazione) {
 		Prenotazione p = prenotazioneProvider.getObject();
-		p.setGiornoPrenotazione(giorno);
-		p.setUtente(u);
-		p.setPostazione(postazione);
-		System.out.println("Prenotazione del " + p.getGiornoPrenotazione() + " salvata creata");
-		return p;
+		if(postazione.isLibera()) {
+			p.setGiornoPrenotazione(giorno);
+			p.setUtente(u);
+			p.setPostazione(postazione);
+			postazione.setLibera(false);
+			System.out.println("Prenotazione del " + p.getGiornoPrenotazione() + " salvata creata");
+		}
+		return p;			
 	}
 	
 	public void salvaPrenotazione(Prenotazione p) {

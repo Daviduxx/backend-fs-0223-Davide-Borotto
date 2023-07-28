@@ -1,5 +1,8 @@
 package com.epicode.spring.service;
 
+import java.util.List;
+import java.util.Set;
+
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -24,6 +27,10 @@ public class EdificioService {
 	public void salvaEdificio(Edificio e) {
 		edirepo.save(e);
 		System.out.println("Edificio " + e.getName() + " salvato nel database!");
+	}
+	
+	public List<Edificio> trovaEdifici(){
+		return (List<Edificio>) edirepo.findAll();
 	}
 
 }

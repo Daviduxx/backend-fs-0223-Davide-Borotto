@@ -1,6 +1,8 @@
 package com.epicode.spring.runner;
 
 import java.time.LocalDate;
+import java.util.List;
+import java.util.Set;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,6 +41,11 @@ public class Runner implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		
 		//creo degli edifici
+		
+		System.out.println();
+		System.out.println("************* CREAZIONE EDIFICI ************");
+		System.out.println();
+		
 		Edificio e1 = ediSvc.creaEdificio();
 		Edificio e2 = ediSvc.creaEdificio();
 		Edificio e3 = ediSvc.creaEdificio();
@@ -48,7 +55,17 @@ public class Runner implements CommandLineRunner{
 		ediSvc.salvaEdificio(e2);
 		ediSvc.salvaEdificio(e3);
 		
+		System.out.println();
+		System.out.println("************* TUTTI GLI EDIFICI ************");
+		System.out.println();
+		
+		List<Edificio> edifici = ediSvc.trovaEdifici();
+		edifici.forEach(e -> System.out.println("ID edificio: " + e.getId() + " nome: " + e.getName()));
+		
 		//creo le postazioni
+		System.out.println();
+		System.out.println("************* CREAZIONE POSTAZIONI ************");
+		System.out.println();
 		Postazione p1 = postSvc.creaPostazione(Tipo.PRIVATO, 1, e1);
 		Postazione p2 = postSvc.creaPostazione(Tipo.OPENSPACE, 5, e2);
 		Postazione p3 = postSvc.creaPostazione(Tipo.SALA_RIUNIONI, 12, e3);
@@ -57,7 +74,23 @@ public class Runner implements CommandLineRunner{
 		postSvc.salvaPostazione(p2);
 		postSvc.salvaPostazione(p3);
 		
+		//leggo tutte le postazioni
+		
+		System.out.println();
+		System.out.println("************* TUTTE LE POSTAZIONI ************");
+		System.out.println();
+		
+		List<Postazione> postazioni = postSvc.findAll();
+		postazioni.forEach(p -> System.out.println("ID postazione: " + p.getId() + " tipo: " + p.getTipo() + " città: " + p.getEdificio().getCitta()));
+		
+		System.out.println();
+		System.out.println("************* RICERCA POSTAZIONI DELL'UTENTE ************");
+		System.out.println();
+		
 		//UTENTI
+		System.out.println();
+		System.out.println("************* CREAZIONE UTENTI ************");
+		System.out.println();
 		Utente u1 = uSvc.creaUtente();
 		Utente u2 = uSvc.creaUtente();
 		Utente u3 = uSvc.creaUtente();
@@ -67,6 +100,9 @@ public class Runner implements CommandLineRunner{
 		uSvc.salvaUtente(u3);
 		
 		//PRENOTAZIONI
+		System.out.println();
+		System.out.println("************* CREAZIONE PRENOTAZIONI ************");
+		System.out.println();
 		Prenotazione pre1 = preSvc.creaPrenotazione(LocalDate.of(2023, 7, 29), u3, p3);
 		Prenotazione pre2 = preSvc.creaPrenotazione(LocalDate.of(2023, 8, 2), u2, p3);
 		Prenotazione pre3 = preSvc.creaPrenotazione(LocalDate.of(2023, 8, 5), u1, p1);
