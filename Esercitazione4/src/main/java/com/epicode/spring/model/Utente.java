@@ -1,5 +1,6 @@
 package com.epicode.spring.model;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import jakarta.persistence.Entity;
@@ -24,6 +25,6 @@ public class Utente {
 	private String fullName;
 	private String email;
 	@OneToMany
-	private Set<Prenotazione> prenotazioni;
+	private Set<Prenotazione> prenotazioni = new HashSet<Prenotazione>();
 
 }
