@@ -5,6 +5,7 @@ import java.util.Set;
 
 import com.epicode.spring.enumerations.Tipo;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;

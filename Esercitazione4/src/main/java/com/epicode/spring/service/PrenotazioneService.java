@@ -52,5 +52,9 @@ public class PrenotazioneService {
 		preRepo.save(p);
 		System.out.println("Prenotazione salvata nel db");
 	}
+	
+	public Prenotazione findById(Integer id) {
+		return preRepo.findById(id).get();
+	}
 
 }

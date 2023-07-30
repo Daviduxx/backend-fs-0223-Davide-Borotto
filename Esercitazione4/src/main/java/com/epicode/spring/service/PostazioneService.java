@@ -50,6 +50,11 @@ public class PostazioneService {
 		System.out.println("POstazione numero: " + p.getId() + " modificata.");
 	}
 	
+	public void eliminaPostazione(Postazione p) {
+		postRepo.delete(p);
+		System.out.println("POstazione numero: " + p.getId() + " eliminata.");
+	}
+	
 	public List<Postazione> findAll(){
 		return (List<Postazione>) postRepo.findAll();
 	}
