@@ -93,10 +93,10 @@ public class Runner implements CommandLineRunner{
 		//postSvc.aggiornaPostazione(p2);
 		
 		//DELETE
-		postSvc.eliminaPostazione(upUpdate);
-		postSvc.eliminaPostazione(post2);
-		postSvc.eliminaPostazione(post3);
-		postSvc.eliminaPostazione(post4);
+//		postSvc.eliminaPostazione(upUpdate);
+//		postSvc.eliminaPostazione(post2);
+//		postSvc.eliminaPostazione(post3);
+//		postSvc.eliminaPostazione(post4);
 		
 		
 		System.out.println();
@@ -132,6 +132,16 @@ public class Runner implements CommandLineRunner{
 //		preSvc.salvaPrenotazione(pre1);
 //		preSvc.salvaPrenotazione(pre2);
 //		preSvc.salvaPrenotazione(pre3);
+		
+		Prenotazione pren1 = preSvc.findById(4);
+		Prenotazione pren2 = preSvc.findById(5);
+		Prenotazione pren3 = preSvc.findById(6);
+		Prenotazione pren4 = preSvc.findById(7);
+		
+		preSvc.eliminaPrenotazione(pren1);
+		preSvc.eliminaPrenotazione(pren2);
+		preSvc.eliminaPrenotazione(pren3);
+		preSvc.eliminaPrenotazione(pren4);
 		
 		
 		// *************** EXTRA - METODI DEL CRUD NON STRETTAMENTE NECESSARI PER L'ESERCIZIO ************

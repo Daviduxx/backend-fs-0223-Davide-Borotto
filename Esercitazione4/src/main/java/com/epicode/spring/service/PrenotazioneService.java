@@ -56,5 +56,10 @@ public class PrenotazioneService {
 	public Prenotazione findById(Integer id) {
 		return preRepo.findById(id).get();
 	}
+	
+	public void eliminaPrenotazione(Prenotazione pre) {
+		preRepo.delete(pre);
+		System.out.println("Prenotazione numero: " + pre.getId() + " eliminata.");
+	}
 
 }
