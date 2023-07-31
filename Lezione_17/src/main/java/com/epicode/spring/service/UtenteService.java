@@ -20,5 +20,10 @@ public class UtenteService {
 		System.out.println("Ho creato il seguente utente: " + u.getNome() + " " + u.getCognome() + " " + u.getEta());
 		return u;
 	}
+	
+	public void salvaUtente(Utente u) {
+		uRepo.save(u);
+		System.out.println("Utente " + u.getNome() + " salvato nel db");
+	}
 
 }

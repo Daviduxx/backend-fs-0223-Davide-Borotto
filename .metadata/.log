@@ -9679,3 +9679,12 @@ java.lang.InterruptedException
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-31 15:20:34.009
 !MESSAGE Classpath changed for project: Lezione_17
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-31 15:30:38.993
+!MESSAGE Classpath changed for project: Lezione_17
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-31 15:31:23.049
+!MESSAGE Classpath changed for project: Lezione_17
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-31 15:33:18.841
+!MESSAGE Classpath changed for project: Lezione_17
