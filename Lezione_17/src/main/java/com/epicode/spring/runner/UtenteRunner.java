@@ -27,6 +27,8 @@ public class UtenteRunner implements CommandLineRunner{
 //		uSvc.salvaUtente(u3);
 //		uSvc.salvaUtente(u4);
 		
+		// anziche salvarli uno per uno conviene fare un ciclo con un tot di iterazioni
+		
 	}
 
 }

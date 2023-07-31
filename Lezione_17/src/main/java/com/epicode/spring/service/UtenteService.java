@@ -1,5 +1,7 @@
 package com.epicode.spring.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -21,9 +23,15 @@ public class UtenteService {
 		return u;
 	}
 	
+	
+	// conviene fare una funzione unicac che faccia entrambe le cose
 	public void salvaUtente(Utente u) {
 		uRepo.save(u);
 		System.out.println("Utente " + u.getNome() + " salvato nel db");
+	}
+	
+	public List<Utente> getUtenti(){
+		return (List<Utente>) uRepo.findAll();
 	}
 
 }
