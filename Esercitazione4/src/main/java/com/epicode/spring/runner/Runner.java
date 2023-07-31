@@ -24,7 +24,6 @@ import com.epicode.spring.service.PrenotazioneService;
 import com.epicode.spring.service.UtenteService;
 
 @Component
-//@PropertySource("classpath:application.properties")
 public class Runner implements CommandLineRunner{
 	
 	@Autowired EdificioService ediSvc;
@@ -32,9 +31,6 @@ public class Runner implements CommandLineRunner{
 	@Autowired UtenteService uSvc;
 	@Autowired PrenotazioneService preSvc;
 	
-//	@Value("${postazione.privata}") private Integer singola;
-//	@Value("${postazione.openspace}") private Integer open;
-//	@Value("${postazione.riunione}") private Integer riunione;
 	
 	static Logger log = LoggerFactory.getLogger(Runner.class);
 
@@ -73,24 +69,24 @@ public class Runner implements CommandLineRunner{
 		System.out.println("************* CREAZIONE POSTAZIONI ************");
 		System.out.println();
 		
-//		Postazione p1 = postSvc.creaPostazione(Tipo.PRIVATO, 1, e1);
-//		Postazione p2 = postSvc.creaPostazione(Tipo.OPENSPACE, 5, e2);
-//		Postazione p3 = postSvc.creaPostazione(Tipo.SALA_RIUNIONI, 12, e3);
+		Postazione p1 = postSvc.creaPostazione(Tipo.PRIVATO, 1, e1);
+		Postazione p2 = postSvc.creaPostazione(Tipo.OPENSPACE, 5, e2);
+		Postazione p3 = postSvc.creaPostazione(Tipo.SALA_RIUNIONI, 12, e3);
 		
 		//SAVE
-//		postSvc.salvaPostazione(p1);
-//		postSvc.salvaPostazione(p2);
-//		postSvc.salvaPostazione(p3);
+		postSvc.salvaPostazione(p1);
+		postSvc.salvaPostazione(p2);
+		postSvc.salvaPostazione(p3);
 		
 		//FIND BY ID
-//		Edificio ed1 = ediSvc.trovaEdificio(1L);
-//		Edificio ed2 = ediSvc.trovaEdificio(2L);
+		Edificio ed1 = ediSvc.trovaEdificio(1L);
+		Edificio ed2 = ediSvc.trovaEdificio(2L);
 		Postazione upUpdate = postSvc.trovaPostazione(1l);
 		Postazione post2 = postSvc.trovaPostazione(2l);
 		Postazione post3 = postSvc.trovaPostazione(3l);
 		Postazione post4 = postSvc.trovaPostazione(4l);
-		//postSvc.aggiornaPostazione(p1);
-		//postSvc.aggiornaPostazione(p2);
+		postSvc.aggiornaPostazione(p1);
+		postSvc.aggiornaPostazione(p2);
 		
 		//DELETE
 //		postSvc.eliminaPostazione(upUpdate);
@@ -109,13 +105,13 @@ public class Runner implements CommandLineRunner{
 		System.out.println();
 		System.out.println("************* CREAZIONE UTENTI ************");
 		System.out.println();
-//		Utente u1 = uSvc.creaUtente();
-//		Utente u2 = uSvc.creaUtente();
-//		Utente u3 = uSvc.creaUtente();
+		Utente u1 = uSvc.creaUtente();
+		Utente u2 = uSvc.creaUtente();
+		Utente u3 = uSvc.creaUtente();
 		
-//		uSvc.salvaUtente(u1);
-//		uSvc.salvaUtente(u2);
-//		uSvc.salvaUtente(u3);
+		uSvc.salvaUtente(u1);
+		uSvc.salvaUtente(u2);
+		uSvc.salvaUtente(u3);
 		
 		//PRENOTAZIONI
 		System.out.println();
@@ -125,23 +121,23 @@ public class Runner implements CommandLineRunner{
 		Utente ut1 = uSvc.findUtente(3l);
 		
 		
-//		Prenotazione pre1 = preSvc.creaPrenotazione(LocalDate.of(2023, 10, 29), ut1, upUpdate);
-//		Prenotazione pre2 = preSvc.creaPrenotazione(LocalDate.of(2023, 8, 2), ut1, post2);
-//		Prenotazione pre3 = preSvc.creaPrenotazione(LocalDate.of(2023, 8, 5), u1, p1);
+		Prenotazione pre1 = preSvc.creaPrenotazione(LocalDate.of(2023, 10, 29), ut1, upUpdate);
+		Prenotazione pre2 = preSvc.creaPrenotazione(LocalDate.of(2023, 8, 2), ut1, post2);
+		Prenotazione pre3 = preSvc.creaPrenotazione(LocalDate.of(2023, 8, 5), u1, p1);
 		
-//		preSvc.salvaPrenotazione(pre1);
-//		preSvc.salvaPrenotazione(pre2);
-//		preSvc.salvaPrenotazione(pre3);
+		preSvc.salvaPrenotazione(pre1);
+		preSvc.salvaPrenotazione(pre2);
+		preSvc.salvaPrenotazione(pre3);
 		
-		Prenotazione pren1 = preSvc.findById(4);
-		Prenotazione pren2 = preSvc.findById(5);
-		Prenotazione pren3 = preSvc.findById(6);
-		Prenotazione pren4 = preSvc.findById(7);
-		
-		preSvc.eliminaPrenotazione(pren1);
-		preSvc.eliminaPrenotazione(pren2);
-		preSvc.eliminaPrenotazione(pren3);
-		preSvc.eliminaPrenotazione(pren4);
+//		Prenotazione pren1 = preSvc.findById(4);
+//		Prenotazione pren2 = preSvc.findById(5);
+//		Prenotazione pren3 = preSvc.findById(6);
+//		Prenotazione pren4 = preSvc.findById(7);
+//		
+//		preSvc.eliminaPrenotazione(pren1);
+//		preSvc.eliminaPrenotazione(pren2);
+//		preSvc.eliminaPrenotazione(pren3);
+//		preSvc.eliminaPrenotazione(pren4);
 		
 		
 		// *************** EXTRA - METODI DEL CRUD NON STRETTAMENTE NECESSARI PER L'ESERCIZIO ************
