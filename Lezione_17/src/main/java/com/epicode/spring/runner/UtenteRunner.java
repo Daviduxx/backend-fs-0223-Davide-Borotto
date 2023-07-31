@@ -17,15 +17,15 @@ public class UtenteRunner implements CommandLineRunner{
 		
 		System.out.println("Runner works!");
 		
-		Utente u1 = uSvc.creaUtente();
-		Utente u2 = uSvc.creaUtente();
-		Utente u3 = uSvc.creaUtente();
-		Utente u4 = uSvc.creaUtente();
-		
-		uSvc.salvaUtente(u1);
-		uSvc.salvaUtente(u2);
-		uSvc.salvaUtente(u3);
-		uSvc.salvaUtente(u4);
+//		Utente u1 = uSvc.creaUtente();
+//		Utente u2 = uSvc.creaUtente();
+//		Utente u3 = uSvc.creaUtente();
+//		Utente u4 = uSvc.creaUtente();
+//		
+//		uSvc.salvaUtente(u1);
+//		uSvc.salvaUtente(u2);
+//		uSvc.salvaUtente(u3);
+//		uSvc.salvaUtente(u4);
 		
 	}
 
