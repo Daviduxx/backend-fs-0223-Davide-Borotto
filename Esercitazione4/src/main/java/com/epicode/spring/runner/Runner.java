@@ -74,19 +74,19 @@ public class Runner implements CommandLineRunner{
 		Postazione p3 = postSvc.creaPostazione(Tipo.SALA_RIUNIONI, 12, e3);
 		
 		//SAVE
-		postSvc.salvaPostazione(p1);
-		postSvc.salvaPostazione(p2);
-		postSvc.salvaPostazione(p3);
+//		postSvc.salvaPostazione(p1);
+//		postSvc.salvaPostazione(p2);
+//		postSvc.salvaPostazione(p3);
 		
 		//FIND BY ID
-		Edificio ed1 = ediSvc.trovaEdificio(1L);
-		Edificio ed2 = ediSvc.trovaEdificio(2L);
+//		Edificio ed1 = ediSvc.trovaEdificio(1L);
+//		Edificio ed2 = ediSvc.trovaEdificio(2L);
 		Postazione upUpdate = postSvc.trovaPostazione(1l);
 		Postazione post2 = postSvc.trovaPostazione(2l);
 		Postazione post3 = postSvc.trovaPostazione(3l);
 		Postazione post4 = postSvc.trovaPostazione(4l);
-		postSvc.aggiornaPostazione(p1);
-		postSvc.aggiornaPostazione(p2);
+//		postSvc.aggiornaPostazione(p1);
+//		postSvc.aggiornaPostazione(p2);
 		
 		//DELETE
 //		postSvc.eliminaPostazione(upUpdate);
@@ -99,7 +99,7 @@ public class Runner implements CommandLineRunner{
 		System.out.println("************* RICERCA POSTAZIONI DELL'UTENTE ************");
 		System.out.println();
 		
-		List<Postazione> postazioniTrovate = postSvc.trovaPerCittaETipo("Torino", Tipo.PRIVATO);
+		//List<Postazione> postazioniTrovate = postSvc.trovaPerCittaETipo("Torino", Tipo.PRIVATO);
 		
 		//UTENTI
 		System.out.println();
@@ -108,10 +108,10 @@ public class Runner implements CommandLineRunner{
 		Utente u1 = uSvc.creaUtente();
 		Utente u2 = uSvc.creaUtente();
 		Utente u3 = uSvc.creaUtente();
-		
-		uSvc.salvaUtente(u1);
-		uSvc.salvaUtente(u2);
-		uSvc.salvaUtente(u3);
+//		
+//		uSvc.salvaUtente(u1);
+//		uSvc.salvaUtente(u2);
+//		uSvc.salvaUtente(u3);
 		
 		//PRENOTAZIONI
 		System.out.println();
@@ -121,13 +121,13 @@ public class Runner implements CommandLineRunner{
 		Utente ut1 = uSvc.findUtente(3l);
 		
 		
-		Prenotazione pre1 = preSvc.creaPrenotazione(LocalDate.of(2023, 10, 29), ut1, upUpdate);
-		Prenotazione pre2 = preSvc.creaPrenotazione(LocalDate.of(2023, 8, 2), ut1, post2);
-		Prenotazione pre3 = preSvc.creaPrenotazione(LocalDate.of(2023, 8, 5), u1, p1);
-		
-		preSvc.salvaPrenotazione(pre1);
-		preSvc.salvaPrenotazione(pre2);
-		preSvc.salvaPrenotazione(pre3);
+		//Prenotazione pre1 = preSvc.creaPrenotazione(LocalDate.of(2023, 11, 29), ut1, upUpdate);
+		Prenotazione pre2 = preSvc.creaPrenotazione(LocalDate.of(2023, 9, 4), ut1, post3);
+		//Prenotazione pre3 = preSvc.creaPrenotazione(LocalDate.of(2023, 8, 5), u1, p1);
+//		
+//		preSvc.salvaPrenotazione(pre1);
+//		preSvc.salvaPrenotazione(pre2);
+//		preSvc.salvaPrenotazione(pre3);
 		
 //		Prenotazione pren1 = preSvc.findById(4);
 //		Prenotazione pren2 = preSvc.findById(5);
@@ -142,12 +142,12 @@ public class Runner implements CommandLineRunner{
 		
 		// *************** EXTRA - METODI DEL CRUD NON STRETTAMENTE NECESSARI PER L'ESERCIZIO ************
 		//leggo tutte le postazioni
-		System.out.println();
-		System.out.println("************* TUTTE LE POSTAZIONI ************");
-		System.out.println();
-				
-		List<Postazione> postazioni = postSvc.findAll();
-		postazioni.forEach(p -> System.out.println("ID postazione: " + p.getId() + " tipo: " + p.getTipo() + " città: " + p.getEdificio().getCitta()));
+//		System.out.println();
+//		System.out.println("************* TUTTE LE POSTAZIONI ************");
+//		System.out.println();
+//				
+//		List<Postazione> postazioni = postSvc.findAll();
+//		postazioni.forEach(p -> System.out.println("ID postazione: " + p.getId() + " tipo: " + p.getTipo() + " città: " + p.getEdificio().getCitta()));
 	}
 
 }
