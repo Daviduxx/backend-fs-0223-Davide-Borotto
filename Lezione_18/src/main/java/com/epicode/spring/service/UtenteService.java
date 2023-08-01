@@ -28,5 +28,9 @@ public class UtenteService {
 	public List<Utente> getUtenti(){
 		return (List<Utente>) uRepo.findAll();
 	}
+	
+	public Utente getUtente(Long id) {
+		return uRepo.findById(id).get();	
+				}
 
 }

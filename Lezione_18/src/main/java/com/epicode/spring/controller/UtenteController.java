@@ -3,34 +3,38 @@ package com.epicode.spring.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.epicode.spring.model.Utente;
 import com.epicode.spring.service.UtenteService;
 
-@Controller
+@RestController
+@RequestMapping("/api/utenti")
 public class UtenteController {
 	
-	// è giusto fare l'autowired del service sul controller
 	@Autowired UtenteService uSvc;
 	
-	@GetMapping("/")
-	public @ResponseBody String getHomePage() {
-		return "<h1>Questa è una pagina di test</h1>";
+	@GetMapping
+	public ResponseEntity<List<Utente>> returnAll() {
+		List<Utente> lista = uSvc.getUtenti();
+		ResponseEntity<List<Utente>> resp = new ResponseEntity<List<Utente>>(lista, HttpStatus.OK);
+		return resp;
 	}
 	
-	@GetMapping("/about")
-	public String getAbout() {
-		return "about.html";
+	@GetMapping("/{id}")
+	public ResponseEntity<Utente> returnOne(@PathVariable Long id ) {
+		Utente u = uSvc.getUtente(id);
+		return new ResponseEntity<Utente>(u, HttpStatus.OK);
 	}
-	@GetMapping("/users")
-	public String getDb() {
-		//leggo tutti gli utenti dal database
-		List<Utente> listaUtenti = uSvc.getUtenti();
-		System.out.println("nel dv sono presenti " + listaUtenti.size() + " utenti");
-		return "users.html";
-	}
+	
+
 
 }
