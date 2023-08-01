@@ -36,5 +36,11 @@ public class UtenteService {
 	public Utente creaUtenteCustom(Utente utente) {
 		return uRepo.save(utente);
 	}
+	
+	public String eliminaUtente(Long id) {
+		Utente u = uRepo.findById(id).get();
+		uRepo.delete(u);
+		return "Utente eliminato";
+	}
 
 }

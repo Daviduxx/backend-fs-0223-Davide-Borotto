@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -40,7 +41,18 @@ public class UtenteController {
 	@PostMapping
 	public ResponseEntity<Utente> creaUtente(@RequestBody Utente utente){
 		Utente u = uSvc.creaUtenteCustom(utente);
+		System.out.println(utente);
 		return new ResponseEntity<Utente>(u, HttpStatus.CREATED);
+	}
+	
+	@DeleteMapping("/{id}")
+	public ResponseEntity<String> rimuoviUtente(@PathVariable Long id){
+		try {
+			String msg = uSvc.eliminaUtente(id);
+			return new ResponseEntity<String>(msg, HttpStatus.OK);			
+		} catch(Exception e) {
+			return new ResponseEntity<String>(e.getMessage(), HttpStatus.NOT_FOUND);
+		}
 	}
 
 
