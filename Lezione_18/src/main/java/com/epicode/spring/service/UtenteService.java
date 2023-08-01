@@ -31,6 +31,10 @@ public class UtenteService {
 	
 	public Utente getUtente(Long id) {
 		return uRepo.findById(id).get();	
-				}
+	}
+	
+	public Utente creaUtenteCustom(Utente utente) {
+		return uRepo.save(utente);
+	}
 
 }
