@@ -42,5 +42,10 @@ public class UtenteService {
 		uRepo.delete(u);
 		return "Utente eliminato";
 	}
+	
+	public Utente aggiornaUtente(Long id) {
+		Utente u = uRepo.findById(id).get();
+		return uRepo.save(u);
+	}
 
 }
