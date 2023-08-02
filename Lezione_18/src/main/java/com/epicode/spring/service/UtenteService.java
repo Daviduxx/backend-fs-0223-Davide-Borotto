@@ -43,8 +43,7 @@ public class UtenteService {
 		return "Utente eliminato";
 	}
 	
-	public Utente aggiornaUtente(Long id) {
-		Utente u = uRepo.findById(id).get();
+	public Utente aggiornaUtente(Utente u) {
 		return uRepo.save(u);
 	}
 

@@ -56,10 +56,11 @@ public class UtenteController {
 		}
 	}
 	
-//	@PutMapping("/{id}")
-//	public ResponseEntity<?> aggiornaUtente(@PathVariable Long id){
-//		
-//	}
+	@PutMapping("/{id}")
+	public ResponseEntity<?> aggiornaUtente(@PathVariable Utente u){
+		Utente ut = uSvc.aggiornaUtente(u);
+		return new ResponseEntity<Utente>(ut, HttpStatus.OK);
+	}
 
 
 }
