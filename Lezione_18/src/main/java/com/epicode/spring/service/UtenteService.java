@@ -5,10 +5,13 @@ import java.util.List;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.epicode.spring.model.Utente;
 import com.epicode.spring.repository.UtenteDAORepository;
+import com.epicode.spring.repository.UtentePageableRepository;
 
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
@@ -20,6 +23,14 @@ public class UtenteService {
 	
 	@Autowired @Qualifier("utente") private ObjectProvider<Utente> utenteProvider;
 	
+	@Autowired UtentePageableRepository cuRepo;
+	
+	
+	//metodo getall che usa la paginazione, usa una repository diversa
+	public Page<Utente> getUtentiPageable(Pageable pageable){
+		return cuRepo.findAll(pageable);
+	}
+	
 	public Utente creaUtente() {
 		Utente u = utenteProvider.getObject();
 		uRepo.save(u);
@@ -27,7 +38,7 @@ public class UtenteService {
 		return u;
 	}
 	
-	
+	//metodo getall normale
 	public List<Utente> getUtenti(){
 		return (List<Utente>) uRepo.findAll();
 	}
