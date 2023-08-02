@@ -26,6 +26,8 @@ public class UtenteController {
 	
 	@Autowired UtenteService uSvc;
 	
+	//con la gestione delle eccezioni non devo fare nessun controllo in manuale
+	//la richiesta get all è difficile che si verifichino eccezioni. al massimo mi può tornarer una lista vuota
 	@GetMapping
 	public ResponseEntity<List<Utente>> returnAll() {
 		List<Utente> lista = uSvc.getUtenti();
@@ -33,8 +35,9 @@ public class UtenteController {
 		return resp;
 	}
 	
+	
 	@GetMapping("/{id}")
-	public ResponseEntity<Utente> returnOne(@PathVariable Long id ) {
+	public ResponseEntity<?> returnOne(@PathVariable Long id ) {
 		Utente u = uSvc.getUtente(id);
 		return new ResponseEntity<Utente>(u, HttpStatus.OK);
 	}
@@ -57,8 +60,8 @@ public class UtenteController {
 	}
 	
 	@PutMapping("/{id}")
-	public ResponseEntity<?> aggiornaUtente(@PathVariable Utente u){
-		Utente ut = uSvc.aggiornaUtente(u);
+	public ResponseEntity<?> aggiornaUtente(@PathVariable Long id, @RequestBody Utente u){
+		Utente ut = uSvc.aggiornaUtente(u, id);
 		return new ResponseEntity<Utente>(ut, HttpStatus.OK);
 	}
 
