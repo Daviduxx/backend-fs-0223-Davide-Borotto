@@ -10922,3 +10922,6 @@ java.lang.ClassNotFoundException: org.springframework.ide.vscode.commons.protoco
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-02 20:49:54.368
 !MESSAGE Classpath changed for project: Lezione_18
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-02 20:56:11.832
+!MESSAGE Classpath changed for project: Lezione_18

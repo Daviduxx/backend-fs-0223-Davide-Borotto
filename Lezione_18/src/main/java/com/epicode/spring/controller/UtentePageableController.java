@@ -15,7 +15,7 @@ import com.epicode.spring.model.Utente;
 import com.epicode.spring.service.UtenteService;
 
 @RestController
-@RequestMapping("api/utente/pageable")
+@RequestMapping("api/utenti/pageable")
 public class UtentePageableController {
 	
 	@Autowired UtenteService uSvc;
