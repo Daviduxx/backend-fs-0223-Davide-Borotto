@@ -22,5 +22,11 @@ public class UtenteConfiguration {
 		u.setEta(faker.number().numberBetween(18, 99));
 		return u;
 	}
+	
+	@Bean("utenteCustom")
+	@Scope("prototype")
+	public Utente creaUtenteCustom() {
+		return new Utente();
+	}
 
 }

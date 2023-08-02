@@ -19,7 +19,9 @@ public class Utente {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
-	@Column(unique = true)
+	//@Column(unique = true) 
+	// disabilito momentaneamente perché mi darà errore
+	//ovviamente così non funzionerà più l'exception exists
 	private String cognome;
 	private Integer eta;
 
