@@ -10,5 +10,8 @@ import java.util.Optional;
 public interface RoleRepository extends JpaRepository<Role, Long> {
     
 	Optional<Role> findByRoleName(ERole roleName);
+	
+	//normale repository
+	// jparepository è una sottoclasse di cruds repository, fa le stesse cose
 
 }

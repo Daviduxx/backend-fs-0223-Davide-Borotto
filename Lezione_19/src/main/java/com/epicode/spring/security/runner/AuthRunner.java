@@ -32,7 +32,7 @@ public class AuthRunner implements ApplicationRunner {
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		System.out.println("Run...");
-		// Da lanciare solo la prima volta
+		// Da lanciare solo la prima volta, sarebbe meglio mettere un controllo
 		//setRoleDefault();
 		
 	}
@@ -50,7 +50,7 @@ public class AuthRunner implements ApplicationRunner {
 		moderator.setRoleName(ERole.ROLE_MODERATOR);
 		roleRepository.save(moderator);
 		
-		adminRole = new HashSet<Role>();
+		adminRole = new HashSet<Role>(); //aggiunta a un set, non è strettamente necessario
 		adminRole.add(admin);
 		adminRole.add(moderator);
 		adminRole.add(user);

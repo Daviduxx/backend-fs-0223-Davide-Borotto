@@ -35,7 +35,7 @@ public class AuthServiceImpl implements AuthService {
     private JwtTokenProvider jwtTokenProvider;
 
 
-    public AuthServiceImpl(AuthenticationManager authenticationManager,
+    public AuthServiceImpl(AuthenticationManager authenticationManager, //classe di spring security
                            UserRepository userRepository,
                            RoleRepository roleRepository,
                            PasswordEncoder passwordEncoder,
@@ -66,12 +66,12 @@ public class AuthServiceImpl implements AuthService {
     @Override
     public String register(RegisterDto registerDto) {
 
-        // add check for username exists in database
+        // add check for username exists in database //controllo se lo username è gia presente
         if(userRepository.existsByUsername(registerDto.getUsername())){
             throw new MyAPIException(HttpStatus.BAD_REQUEST, "Username is already exists!.");
         }
 
-        // add check for email exists in database
+        // add check for email exists in database //controlla se la email è gia presente
         if(userRepository.existsByEmail(registerDto.getEmail())){
             throw new MyAPIException(HttpStatus.BAD_REQUEST, "Email is already exists!.");
         }
@@ -80,7 +80,7 @@ public class AuthServiceImpl implements AuthService {
         user.setName(registerDto.getName());
         user.setUsername(registerDto.getUsername());
         user.setEmail(registerDto.getEmail());
-        user.setPassword(passwordEncoder.encode(registerDto.getPassword()));
+        user.setPassword(passwordEncoder.encode(registerDto.getPassword())); //la password viene codificata
 
         Set<Role> roles = new HashSet<>();
         
@@ -92,7 +92,7 @@ public class AuthServiceImpl implements AuthService {
         } else {
         	Role userRole = roleRepository.findByRoleName(ERole.ROLE_USER).get();
         	roles.add(userRole);
-        }
+        } //se il client non passa nessun ruolo gli viene assegnato di default user
         
         user.setRoles(roles);
         System.out.println(user);

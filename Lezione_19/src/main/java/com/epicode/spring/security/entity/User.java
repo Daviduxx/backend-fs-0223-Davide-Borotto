@@ -20,6 +20,9 @@ import java.util.Set;
 @Table(name = "users", uniqueConstraints = { @UniqueConstraint(columnNames = "username"),
 		@UniqueConstraint(columnNames = "email") })
 public class User {
+	
+	//normale tabella che viene creata nel db
+	//le colonne possono essere aggiornate, modificate, eliminate ecc
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,10 +35,10 @@ public class User {
     @Column(nullable = false)
     private String password;
     
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
-    @JoinTable(name = "users_roles",
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE) //un utente può avere più ruoli, ogni ruolo può essere assegnato a più di un utente
+    @JoinTable(name = "users_roles", //vado a cambiare il nome della tabella che gestisce la relazione tra ruolo e utente
             joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id")
+            inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id") //se non metto tutte queste cose non cambia niente, lo fa in maniera automatica
     )
-    private Set<Role> roles = new HashSet<>();
+    private Set<Role> roles = new HashSet<>(); //un utente può avere più di un ruolo
 }

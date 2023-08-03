@@ -20,3 +20,6 @@ public class RegisterDto {
     private String password;
     private Set<String> roles;
 }
+
+//non è una entity. serve solo per tipizzasre l'oggetto che arriva dal client.
+//simile alle interfacce di angular
