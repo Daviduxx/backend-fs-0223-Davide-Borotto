@@ -11506,3 +11506,9 @@ java.lang.ClassNotFoundException: org.springframework.ide.vscode.commons.protoco
 
 !ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2023-08-04 00:04:27.055
 !MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-04 00:38:15.388
+!MESSAGE Classpath changed for project: Lezione_19
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-04 00:50:35.005
+!MESSAGE Classpath changed for project: Lezione_19
