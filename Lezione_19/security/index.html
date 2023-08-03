@@ -7,15 +7,16 @@
 </head>
 <body>
 
-    <h1>registrati</h1>
+    <h1>LOGIN</h1>
 
-    <form action="http://localhost:8080/api/test/auth">
+    <form>
         <label for="name">name:</label>
-        <input type="text" id="name">
-        <label for="lastName">lastname:</label>
-        <input type="text" id="lastName">
-        <input type="submit" value="registrati">
+        <input type="text" id="name" required>
+        <label for="password">password:</label>
+        <input type="text" id="password"  required>
+        <input type="submit" value="LOGIN" id="login">
     </form>
     
+    <script src="script.js"></script>
 </body>
 </html>
