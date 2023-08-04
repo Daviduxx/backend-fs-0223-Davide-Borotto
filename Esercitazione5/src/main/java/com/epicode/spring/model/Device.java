@@ -6,7 +6,10 @@ import com.epicode.spring.enums.Status;
 import com.epicode.spring.enums.Type;
 import com.epicode.spring.security.entity.User;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -28,7 +31,9 @@ public class Device {
 	private Long id;
 	private String brandName;
 	private String model;
+	//@Enumerated(EnumType.STRING)
 	private Type type;
+	//@Enumerated(EnumType.STRING)
 	private Status status;
 	@ManyToMany
 	private List<User> user; 
