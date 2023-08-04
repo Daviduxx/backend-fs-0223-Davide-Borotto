@@ -10,6 +10,8 @@ import lombok.ToString;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.epicode.spring.model.Device;
+
 
 @Setter
 @Getter
@@ -42,4 +44,7 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id") //se non metto tutte queste cose non cambia niente, lo fa in maniera automatica
     )
     private Set<Role> roles = new HashSet<>(); //un utente può avere più di un ruolo
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "users_devices")
+    private Set<Device> devices = new HashSet<>();
 }
