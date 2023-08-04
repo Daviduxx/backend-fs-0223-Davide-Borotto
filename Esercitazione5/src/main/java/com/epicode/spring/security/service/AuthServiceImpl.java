@@ -3,6 +3,7 @@ package com.epicode.spring.security.service;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -11,6 +12,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.epicode.spring.repository.deviceDAORepository;
 import com.epicode.spring.security.entity.ERole;
 import com.epicode.spring.security.entity.Role;
 import com.epicode.spring.security.entity.User;
@@ -27,6 +29,7 @@ import com.epicode.spring.security.security.JwtTokenProvider;
 
 @Service
 public class AuthServiceImpl implements AuthService {
+	
 
     private AuthenticationManager authenticationManager;
     private UserRepository userRepository;

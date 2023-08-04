@@ -2,6 +2,8 @@ package com.epicode.spring.security.payload;
 
 import java.util.Set;
 
+import com.epicode.spring.model.Device;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
