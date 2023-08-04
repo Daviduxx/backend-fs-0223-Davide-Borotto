@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.epicode.spring.model.Device;
 import com.epicode.spring.repository.UserDAORepository;
 import com.epicode.spring.repository.deviceDAORepository;
+import com.epicode.spring.security.entity.ERole;
 import com.epicode.spring.security.entity.User;
 import com.epicode.spring.security.payload.JWTAuthResponse;
 import com.epicode.spring.security.payload.LoginDto;
@@ -70,7 +71,7 @@ public class AuthController {
 		us.setUsername(user.getUsername());
 		us.setPassword(user.getPassword());
 		us.setRoles(user.getRoles());
-		for (Device device : us.getDevices()) {
+		for (Device device : user.getDevices()) {
             Device existingDevice = dRepo.findById(device.getId()).orElse(null);
             if (existingDevice != null) {
                 us.getDevices().add(existingDevice);
