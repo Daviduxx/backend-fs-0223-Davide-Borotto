@@ -1,6 +1,7 @@
 package com.epicode.spring.security.runner;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -32,8 +33,11 @@ public class AuthRunner implements ApplicationRunner {
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		System.out.println("Run...");
-		// Da lanciare solo la prima volta, sarebbe meglio mettere un controllo
-		//setRoleDefault();
+		// Constrollo: se i ruoli ci sono già non viene lanciato il metodo
+		List<Role> ruoli = roleRepository.findAll();
+		if(ruoli.size() == 0) {
+			setRoleDefault();			
+		}
 		
 	}
 	
