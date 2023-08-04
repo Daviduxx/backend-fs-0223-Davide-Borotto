@@ -21,7 +21,7 @@ import com.epicode.spring.model.Utente;
 import com.epicode.spring.service.UtenteService;
 
 @RestController
-@RequestMapping("/api/utenti")
+@RequestMapping("/dev/utenti")
 public class UtenteController {
 	
 	@Autowired UtenteService uSvc;

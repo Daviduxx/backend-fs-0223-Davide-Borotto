@@ -18,7 +18,7 @@ import com.epicode.spring.security.service.AuthService;
 //il cors è da abilitare su ogni controller
 @CrossOrigin(origins =  "*", maxAge = 3600)
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/device/auth")
 public class AuthController {
 
     private AuthService authService;
@@ -46,6 +46,8 @@ public class AuthController {
         String response = authService.register(registerDto);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
+    
+    
     
     // JSON inviato dal Client
     /*{
