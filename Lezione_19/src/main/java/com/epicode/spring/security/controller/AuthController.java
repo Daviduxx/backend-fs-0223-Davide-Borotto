@@ -2,6 +2,7 @@ package com.epicode.spring.security.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,9 +15,8 @@ import com.epicode.spring.security.payload.RegisterDto;
 import com.epicode.spring.security.service.AuthService;
 
 
-
-
-
+//il cors è da abilitare su ogni controller
+@CrossOrigin(origins =  "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
