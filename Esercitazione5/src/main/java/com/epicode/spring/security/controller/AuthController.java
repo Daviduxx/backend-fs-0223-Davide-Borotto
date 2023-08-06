@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -61,25 +62,12 @@ public class AuthController {
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
     
-    @PutMapping("/aggiungidevice/{id}")
-	public ResponseEntity<User> addDevice(@PathVariable Long id, @RequestBody User user){
-    	User us = uRepo.findById(id).orElse(null);
-    	System.out.println(us);
-		us.setName(user.getName());
-		us.setLastname(user.getLastname());
-		us.setEmail(user.getEmail());
-		us.setUsername(user.getUsername());
-		us.setPassword(user.getPassword());
-		us.setRoles(user.getRoles());
-		for (Device device : user.getDevices()) {
-            Device existingDevice = dRepo.findById(device.getId()).orElse(null);
-            if (existingDevice != null) {
-                us.getDevices().add(existingDevice);
-            }
-        }
-		uRepo.save(us);
-		return new ResponseEntity<User>(us, HttpStatus.OK);
-	}
+//    @PatchMapping("/aggiungidevice/{id}")
+//	public ResponseEntity<User> addDevice(@PathVariable Long id, @RequestBody User user){
+//		return new ResponseEntity<User>(
+//				uSvc.updateUser(id, user),
+//				HttpStatus.OK);
+//	}
 	}
     
 
