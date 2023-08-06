@@ -1,10 +1,13 @@
 package com.epicode.spring.service;
 
+import java.util.HashSet;
 import java.util.Optional;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.epicode.spring.enums.Status;
 import com.epicode.spring.model.Device;
 import com.epicode.spring.repository.UserDAORepository;
 import com.epicode.spring.repository.deviceDAORepository;
@@ -26,7 +29,18 @@ public class UserService {
 		}
 		User us = uRepo.findById(id).orElse(null);
 		
-		us.setDevices(user.getDevices());
+		Set<Device> devices = user.getDevices();
+		Set<Device> uDevices = new HashSet();
+		devices.forEach(d -> {
+			Device de = dRepo.findById(d.getId()).orElse(null);
+			if(de.getStatus() == Status.AVAILABLE){
+			uDevices.add(de);			
+		}
+			else {
+				System.out.println("ERRORE! Non è possibile assegnare questo device!");
+			}
+		});
+		us.setDevices(uDevices);
 		return uRepo.save(us);
 	}
 }
