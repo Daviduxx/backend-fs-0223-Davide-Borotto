@@ -26,6 +26,7 @@ public class UserService {
 		}
 		User us = uRepo.findById(id).orElse(null);
 		
+		us.setDevices(user.getDevices());
 		return uRepo.save(us);
 	}
 }
