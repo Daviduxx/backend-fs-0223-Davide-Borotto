@@ -76,9 +76,9 @@ public class AuthServiceImpl implements AuthService {
         }
         
         // add check for secretCode exists in database
-        if(userRepository.existsBySecretCode(registerDto.getSecretCode())){
-            throw new MyAPIException(HttpStatus.BAD_REQUEST, "SecretCode is already exists!.");
-        }
+//        if(userRepository.existsBySecretCode(registerDto.getSecretCode())){
+//            throw new MyAPIException(HttpStatus.BAD_REQUEST, "SecretCode is already exists!.");
+//        }
 
         User user = new User();
         user.setName(registerDto.getName());
