@@ -7,9 +7,12 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
+
+import com.epicode.spring.security.configuration.SecretCodeConverter;
 
 
 
@@ -33,7 +36,11 @@ public class User {
     private String email;
     @Column(nullable = false)
     private String password;
-   
+    // esercizio sulla cifratura
+    private LocalDate date;
+    @Column(nullable = false, unique = true)
+    @Convert(converter = SecretCodeConverter.class)
+    private String secretCode;
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     @JoinTable(name = "users_roles",
             joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),

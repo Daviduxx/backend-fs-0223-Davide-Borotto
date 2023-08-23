@@ -1,5 +1,6 @@
 package com.epicode.spring.security.service;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -78,16 +79,17 @@ public class AuthServiceImpl implements AuthService {
         }
         
         // add check for secretCode exists in database
-//        if(userRepository.existsBySecretCode(registerDto.getSecretCode())){
-//            throw new MyAPIException(HttpStatus.BAD_REQUEST, "SecretCode is already exists!.");
-//        }
+        if(userRepository.existsBySecretCode(registerDto.getSecretCode())){
+            throw new MyAPIException(HttpStatus.BAD_REQUEST, "SecretCode is already exists!.");
+        }
 
         User user = new User();
         user.setName(registerDto.getName());
         user.setUsername(registerDto.getUsername());
         user.setEmail(registerDto.getEmail());
         user.setPassword(passwordEncoder.encode(registerDto.getPassword()));
-
+        user.setSecretCode(registerDto.getSecretCode());
+        user.setDate(LocalDate.now());
         Set<Role> roles = new HashSet<>();
         
         if(registerDto.getRoles() != null) {
@@ -128,7 +130,12 @@ public class AuthServiceImpl implements AuthService {
     	String pw = userRepository.findById(id).get().getPassword();
     	return pw;
     }
-    
     //FAIL: sembra che l'oggetto passwordEncoder non abbia il metodo "decoder()"
+
+	@Override
+	public List<User> getUsers() {
+		return userRepository.findAll();
+	}
+    
     
 }

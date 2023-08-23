@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.epicode.spring.security.entity.User;
 import com.epicode.spring.security.payload.JWTAuthResponse;
 import com.epicode.spring.security.payload.LoginDto;
 import com.epicode.spring.security.payload.RegisterDto;
@@ -60,13 +61,8 @@ public class AuthController {
     	return new ResponseEntity<String>(response, HttpStatus.OK);
     }
     
-    // JSON inviato dal Client
-    /*{
-        "name": "Giuseppe",
-        "lastname": "Verdi",
-        "username": "giuseppevardi",
-        "email": "g.verdi@example.com",
-        "password": "qwerty",
-        "roles": ["MODERATOR", "ADMIN"]
-    }*/
+    @GetMapping(value = "/users")
+    public ResponseEntity<List<User>> getUsers(){
+    	return new ResponseEntity<List<User>>(authService.getUsers(), HttpStatus.OK);
+    }
 }
