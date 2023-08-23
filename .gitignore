@@ -28,7 +28,7 @@ gradle-app.setting
 .settings/
 bin/
 tmp/
-.metadata
+.metadata/
 .classpath
 .project
 *.tmp
@@ -53,3 +53,5 @@ local.properties
 Spring_2-1/mvnw
 *.ser
 *.dat
+application.properties
+.DS_Store
