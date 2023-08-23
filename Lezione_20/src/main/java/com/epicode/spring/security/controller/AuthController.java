@@ -1,5 +1,7 @@
 package com.epicode.spring.security.controller;
 
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -43,6 +45,12 @@ public class AuthController {
     public ResponseEntity<String> register(@RequestBody RegisterDto registerDto){
         String response = authService.register(registerDto);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
+    }
+    
+    @GetMapping(value = {"/password"})
+    public ResponseEntity<List<String>> getAllPassword(){
+    	List<String> response = authService.getAllPassword();
+    	return new ResponseEntity<List<String>>(response, HttpStatus.OK); 
     }
     
     // JSON inviato dal Client

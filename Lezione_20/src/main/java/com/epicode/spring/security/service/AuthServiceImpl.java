@@ -1,7 +1,9 @@
 package com.epicode.spring.security.service;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import org.springframework.http.HttpStatus;
@@ -109,6 +111,16 @@ public class AuthServiceImpl implements AuthService {
     	if(role.equals("ADMIN")) return ERole.ROLE_ADMIN;
     	else if(role.equals("MODERATOR")) return ERole.ROLE_MODERATOR;
     	else return ERole.ROLE_USER;
+    }
+    
+    @Override
+    public List<String> getAllPassword(){
+    	List<User> userList = userRepository.findAll();
+    	List<String> userPws = new ArrayList();
+    	for (User u : userList) {
+    		userPws.add(u.getPassword());
+    	}
+    	return userPws;
     }
     
 }
