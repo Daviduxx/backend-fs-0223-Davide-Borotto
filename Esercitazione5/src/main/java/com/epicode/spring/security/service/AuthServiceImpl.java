@@ -23,6 +23,8 @@ import com.epicode.spring.security.repository.RoleRepository;
 import com.epicode.spring.security.repository.UserRepository;
 import com.epicode.spring.security.security.JwtTokenProvider;
 
+import jakarta.persistence.EntityNotFoundException;
+
 
 
 
@@ -109,6 +111,14 @@ public class AuthServiceImpl implements AuthService {
     	if(role.equals("ADMIN")) return ERole.ROLE_ADMIN;
     	else if(role.equals("MODERATOR")) return ERole.ROLE_MODERATOR;
     	else return ERole.ROLE_USER;
+    }
+    
+    @Override
+    public String getPassword(Long id) {
+    	if(!userRepository.existsById(id)) {
+    		throw new EntityNotFoundException("Contatto non trovato!");
+    	}
+    	return userRepository.findById(id).get().getPassword();
     }
     
 }

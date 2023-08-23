@@ -68,6 +68,12 @@ public class AuthController {
 //				uSvc.updateUser(id, user),
 //				HttpStatus.OK);
 //	}
+    
+    @GetMapping("/{id}")
+    public ResponseEntity<String> getPassword(@PathVariable Long id){
+    	String p = authService.getPassword(id);
+    	return new ResponseEntity<String>(p, HttpStatus.OK);
+    }
 	}
     
 
