@@ -1,4 +1,4 @@
-package com.epicode.Spring.security.security;
+package com.epicode.spring.security.security;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
@@ -8,7 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
-import com.epicode.Spring.security.exception.MyAPIException;
+import com.epicode.spring.security.exception.MyAPIException;
 
 import java.security.Key;
 import java.util.Date;

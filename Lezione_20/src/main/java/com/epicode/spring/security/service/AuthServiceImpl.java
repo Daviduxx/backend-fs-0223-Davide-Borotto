@@ -1,4 +1,4 @@
-package com.epicode.Spring.security.service;
+package com.epicode.spring.security.service;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
@@ -12,15 +12,15 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.epicode.Spring.security.entity.ERole;
-import com.epicode.Spring.security.entity.Role;
-import com.epicode.Spring.security.entity.User;
-import com.epicode.Spring.security.exception.MyAPIException;
-import com.epicode.Spring.security.payload.LoginDto;
-import com.epicode.Spring.security.payload.RegisterDto;
-import com.epicode.Spring.security.repository.RoleRepository;
-import com.epicode.Spring.security.repository.UserRepository;
-import com.epicode.Spring.security.security.JwtTokenProvider;
+import com.epicode.spring.security.entity.ERole;
+import com.epicode.spring.security.entity.Role;
+import com.epicode.spring.security.entity.User;
+import com.epicode.spring.security.exception.MyAPIException;
+import com.epicode.spring.security.payload.LoginDto;
+import com.epicode.spring.security.payload.RegisterDto;
+import com.epicode.spring.security.repository.RoleRepository;
+import com.epicode.spring.security.repository.UserRepository;
+import com.epicode.spring.security.security.JwtTokenProvider;
 
 
 
@@ -84,9 +84,6 @@ public class AuthServiceImpl implements AuthService {
         user.setName(registerDto.getName());
         user.setUsername(registerDto.getUsername());
         user.setEmail(registerDto.getEmail());
-        user.setDate(LocalDateTime.now());
-        user.setSecretCode(registerDto.getSecretCode());
-        user.setCreditCard(registerDto.getCreditCard());
         user.setPassword(passwordEncoder.encode(registerDto.getPassword()));
 
         Set<Role> roles = new HashSet<>();

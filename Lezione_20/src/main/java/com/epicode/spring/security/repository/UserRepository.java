@@ -1,8 +1,8 @@
-package com.epicode.Spring.security.repository;
+package com.epicode.spring.security.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.epicode.Spring.security.entity.User;
+import com.epicode.spring.security.entity.User;
 
 import java.util.Optional;
 

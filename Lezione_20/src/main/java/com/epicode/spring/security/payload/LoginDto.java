@@ -1,4 +1,4 @@
-package com.epicode.Spring.security.payload;
+package com.epicode.spring.security.payload;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package com.epicode.Spring.security.configuration;
+package com.epicode.spring.security.configuration;
 
 
 import org.springframework.context.annotation.Bean;
@@ -19,8 +19,8 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import com.epicode.Spring.security.security.JwtAuthenticationEntryPoint;
-import com.epicode.Spring.security.security.JwtAuthenticationFilter;
+import com.epicode.spring.security.security.JwtAuthenticationEntryPoint;
+import com.epicode.spring.security.security.JwtAuthenticationFilter;
 
 
 @Configuration

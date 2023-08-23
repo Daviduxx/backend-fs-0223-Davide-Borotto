@@ -1,4 +1,4 @@
-package com.epicode.Spring.security.entity;
+package com.epicode.spring.security.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

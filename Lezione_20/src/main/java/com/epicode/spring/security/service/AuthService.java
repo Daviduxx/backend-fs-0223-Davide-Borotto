@@ -1,7 +1,7 @@
-package com.epicode.Spring.security.service;
+package com.epicode.spring.security.service;
 
-import com.epicode.Spring.security.payload.LoginDto;
-import com.epicode.Spring.security.payload.RegisterDto;
+import com.epicode.spring.security.payload.LoginDto;
+import com.epicode.spring.security.payload.RegisterDto;
 
 public interface AuthService {
     

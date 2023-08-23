@@ -1,4 +1,4 @@
-package com.epicode.Spring.security.security;
+package com.epicode.spring.security.security;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -7,8 +7,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.epicode.Spring.security.entity.User;
-import com.epicode.Spring.security.repository.UserRepository;
+import com.epicode.spring.security.entity.User;
+import com.epicode.spring.security.repository.UserRepository;
 
 import java.util.Set;
 import java.util.stream.Collectors;

@@ -1,4 +1,4 @@
-package com.epicode.Spring.security.security;
+package com.epicode.spring.security.security;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

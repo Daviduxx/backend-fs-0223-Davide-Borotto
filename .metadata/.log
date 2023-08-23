@@ -1052,3 +1052,278 @@ java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.internal.compiler
 	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
 	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
 	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.ui 4 0 2023-08-23 17:53:47.296
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.swt.widgets.Display.filters(int)" because "this.display" is null
+	at org.eclipse.swt.widgets.Widget.filters(Widget.java:831)
+	at org.eclipse.swt.widgets.Control.scrollWheel(Control.java:2567)
+	at org.eclipse.swt.widgets.Link.scrollWheel(Link.java:595)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6452)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Widget.callSuper(Widget.java:236)
+	at org.eclipse.swt.widgets.Widget.windowSendEvent(Widget.java:2264)
+	at org.eclipse.swt.widgets.Shell.windowSendEvent(Shell.java:2511)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6444)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Display.applicationSendEvent(Display.java:5692)
+	at org.eclipse.swt.widgets.Display.applicationProc(Display.java:5831)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSApplication.sendEvent(NSApplication.java:117)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3986)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 17:54:26.948
+!MESSAGE Classpath changed for project: Lezione_20
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 17:55:35.176
+!MESSAGE Classpath changed for project: Lezione_20
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-08-23 17:55:45.493
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 17:55:47.689
+!MESSAGE Classpath changed for project: Lezione_20
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 17:55:58.444
+!MESSAGE Classpath changed for project: Lezione_20
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 17:56:25.794
+!MESSAGE Classpath changed for project: Lezione_20
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-08-23 17:56:48.008
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 17:56:50.101
+!MESSAGE Classpath changed for project: Lezione_20
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 17:56:57.368
+!MESSAGE Classpath changed for project: Lezione_20
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 17:57:10.719
+!MESSAGE Classpath changed for project: Lezione_20
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 17:57:19.728
+!MESSAGE Classpath changed for project: Lezione_20
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 17:57:28.023
+!MESSAGE Classpath changed for project: Lezione_20
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 17:57:35.056
+!MESSAGE Classpath changed for project: Lezione_20
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 17:58:01.295
+!MESSAGE Classpath changed for project: Lezione_20
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 17:58:23.969
+!MESSAGE Classpath changed for project: Lezione_20
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 17:58:34.227
+!MESSAGE Classpath changed for project: Lezione_20
+
+!ENTRY org.eclipse.jdt.ui 4 2 2023-08-23 17:59:27.068
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.internal.compiler.util.HashtableOfPackage.get(char[])" because "this.knownPackages" is null
+	at org.eclipse.jdt.internal.compiler.lookup.PackageBinding.getPackage0(PackageBinding.java:176)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.createPlainPackage(LookupEnvironment.java:1129)
+	at org.eclipse.jdt.internal.compiler.lookup.CompilationUnitScope.buildTypeBindings(CompilationUnitScope.java:136)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.buildTypeBindings(LookupEnvironment.java:478)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.accept(MatchLocator.java:380)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.askForType(LookupEnvironment.java:337)
+	at org.eclipse.jdt.internal.compiler.lookup.PackageBinding.getTypeOrPackage(PackageBinding.java:276)
+	at org.eclipse.jdt.internal.compiler.lookup.CompilationUnitScope.findImport(CompilationUnitScope.java:578)
+	at org.eclipse.jdt.internal.compiler.lookup.CompilationUnitScope.findSingleImport(CompilationUnitScope.java:650)
+	at org.eclipse.jdt.internal.compiler.lookup.CompilationUnitScope.faultInImports(CompilationUnitScope.java:479)
+	at org.eclipse.jdt.internal.compiler.lookup.CompilationUnitScope.faultInTypes(CompilationUnitScope.java:552)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.process(MatchLocator.java:2032)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.locateMatches(MatchLocator.java:1364)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.locateMatches(MatchLocator.java:1401)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.locateMatches(MatchLocator.java:1520)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.locateMatches(JavaSearchParticipant.java:135)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.findMatches(BasicSearchEngine.java:251)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.search(BasicSearchEngine.java:602)
+	at org.eclipse.jdt.core.search.SearchEngine.search(SearchEngine.java:670)
+	at org.eclipse.m2e.jdt.ui.internal.AddDependencyQuickFixProcessor.findMatchingArtifacts(AddDependencyQuickFixProcessor.java:131)
+	at org.eclipse.m2e.jdt.ui.internal.AddDependencyQuickFixProcessor.handleImportNotFound(AddDependencyQuickFixProcessor.java:98)
+	at org.eclipse.m2e.jdt.ui.internal.AddDependencyQuickFixProcessor.getCorrections(AddDependencyQuickFixProcessor.java:79)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionCollector.safeRun(JavaCorrectionProcessor.java:381)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionProcessorAccess.run(JavaCorrectionProcessor.java:341)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionProcessorAccess.process(JavaCorrectionProcessor.java:336)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.collectCorrections(JavaCorrectionProcessor.java:465)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.getJavaAnnotationFixes(ProblemHover.java:115)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.computeCompletionProposals(ProblemHover.java:89)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.<init>(ProblemHover.java:74)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover.createAnnotationInfo(ProblemHover.java:178)
+	at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover.getHoverInfo2(AbstractAnnotationHover.java:755)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.ui 4 0 2023-08-23 18:00:00.989
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.swt.widgets.Display.filters(int)" because "this.display" is null
+	at org.eclipse.swt.widgets.Widget.filters(Widget.java:831)
+	at org.eclipse.swt.widgets.Control.scrollWheel(Control.java:2567)
+	at org.eclipse.swt.widgets.Link.scrollWheel(Link.java:595)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6452)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Widget.callSuper(Widget.java:236)
+	at org.eclipse.swt.widgets.Widget.windowSendEvent(Widget.java:2264)
+	at org.eclipse.swt.widgets.Shell.windowSendEvent(Shell.java:2511)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6444)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Display.applicationSendEvent(Display.java:5692)
+	at org.eclipse.swt.widgets.Display.applicationProc(Display.java:5831)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSApplication.sendEvent(NSApplication.java:117)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3986)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 18:00:17.718
+!MESSAGE Classpath changed for project: Lezione_20
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 18:05:09.946
+!MESSAGE Classpath changed for project: Lezione_20
+
+!ENTRY org.eclipse.ui 4 0 2023-08-23 18:05:30.305
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.swt.widgets.Display.filters(int)" because "this.display" is null
+	at org.eclipse.swt.widgets.Widget.filters(Widget.java:831)
+	at org.eclipse.swt.widgets.Control.scrollWheel(Control.java:2567)
+	at org.eclipse.swt.widgets.Link.scrollWheel(Link.java:595)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6452)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Widget.callSuper(Widget.java:236)
+	at org.eclipse.swt.widgets.Widget.windowSendEvent(Widget.java:2264)
+	at org.eclipse.swt.widgets.Shell.windowSendEvent(Shell.java:2511)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6444)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Display.applicationSendEvent(Display.java:5692)
+	at org.eclipse.swt.widgets.Display.applicationProc(Display.java:5831)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSApplication.sendEvent(NSApplication.java:117)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3986)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 18:06:02.169
+!MESSAGE Classpath changed for project: Lezione_20
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 18:06:42.117
+!MESSAGE Classpath changed for project: Lezione_20
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 18:06:51.499
+!MESSAGE Classpath changed for project: Lezione_20
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 18:07:02.864
+!MESSAGE Classpath changed for project: Lezione_20
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 18:07:11.354
+!MESSAGE Classpath changed for project: Lezione_20
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-08-23 18:07:34.793
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 18:08:09.106
+!MESSAGE Classpath changed for project: Lezione_20
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 18:08:11.843
+!MESSAGE Classpath changed for project: Lezione_20
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 18:09:32.667
+!MESSAGE Classpath changed for project: Lezione_20
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-23 18:10:04.093
+!MESSAGE Classpath changed for project: Lezione_20

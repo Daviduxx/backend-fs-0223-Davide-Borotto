@@ -1,9 +1,9 @@
-package com.epicode.Spring.security.repository;
+package com.epicode.spring.security.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.epicode.Spring.security.entity.ERole;
-import com.epicode.Spring.security.entity.Role;
+import com.epicode.spring.security.entity.ERole;
+import com.epicode.spring.security.entity.Role;
 
 import java.util.Optional;
 

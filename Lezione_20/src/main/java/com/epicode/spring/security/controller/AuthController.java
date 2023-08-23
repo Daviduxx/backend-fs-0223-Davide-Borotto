@@ -1,4 +1,4 @@
-package com.epicode.Spring.security.controller;
+package com.epicode.spring.security.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.epicode.Spring.security.payload.JWTAuthResponse;
-import com.epicode.Spring.security.payload.LoginDto;
-import com.epicode.Spring.security.payload.RegisterDto;
-import com.epicode.Spring.security.service.AuthService;
+import com.epicode.spring.security.payload.JWTAuthResponse;
+import com.epicode.spring.security.payload.LoginDto;
+import com.epicode.spring.security.payload.RegisterDto;
+import com.epicode.spring.security.service.AuthService;
 
 
 

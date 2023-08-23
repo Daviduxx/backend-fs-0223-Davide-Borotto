@@ -1,4 +1,4 @@
-package com.epicode.Spring.security.exception;
+package com.epicode.spring.security.exception;
 
 import org.springframework.http.HttpStatus;
 

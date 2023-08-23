@@ -1,4 +1,4 @@
-package com.epicode.Spring.security.entity;
+package com.epicode.spring.security.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -11,8 +11,6 @@ import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.epicode.Spring.security.configuration.CreditCardConverter;
-import com.epicode.Spring.security.configuration.SecretCodeConverter;
 
 
 @Setter
@@ -35,15 +33,7 @@ public class User {
     private String email;
     @Column(nullable = false)
     private String password;
-    // Parametri aggiuntivi
-    private LocalDateTime date; // data di registrazione
-    @Column(nullable = false, unique = true)
-    @Convert(converter = SecretCodeConverter.class)
-    private String secretCode; // codice numerico personale
-    
-    @Convert(converter = CreditCardConverter.class)
-    private String creditCard;
-    
+   
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     @JoinTable(name = "users_roles",
             joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),

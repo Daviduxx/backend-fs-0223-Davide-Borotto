@@ -1,4 +1,4 @@
-package com.epicode.Spring.security.runner;
+package com.epicode.spring.security.runner;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -10,12 +10,12 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
-import com.epicode.Spring.security.entity.ERole;
-import com.epicode.Spring.security.entity.Role;
-import com.epicode.Spring.security.payload.RegisterDto;
-import com.epicode.Spring.security.repository.RoleRepository;
-import com.epicode.Spring.security.repository.UserRepository;
-import com.epicode.Spring.security.service.AuthService;
+import com.epicode.spring.security.entity.ERole;
+import com.epicode.spring.security.entity.Role;
+import com.epicode.spring.security.payload.RegisterDto;
+import com.epicode.spring.security.repository.RoleRepository;
+import com.epicode.spring.security.repository.UserRepository;
+import com.epicode.spring.security.service.AuthService;
 
 
 @Component

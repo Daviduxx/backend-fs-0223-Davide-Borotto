@@ -1,4 +1,4 @@
-package com.epicode.Spring.security.exception;
+package com.epicode.spring.security.exception;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import com.epicode.Spring.security.payload.ErrorDetails;
+import com.epicode.spring.security.payload.ErrorDetails;
 
 import java.util.Date;
 import java.util.HashMap;
