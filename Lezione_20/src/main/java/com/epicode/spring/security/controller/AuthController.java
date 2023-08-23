@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -51,6 +52,12 @@ public class AuthController {
     public ResponseEntity<List<String>> getAllPassword(){
     	List<String> response = authService.getAllPassword();
     	return new ResponseEntity<List<String>>(response, HttpStatus.OK); 
+    }
+    
+    @GetMapping(value = "/password/{id}")
+    public ResponseEntity<String> getPassword(@PathVariable Long id){
+    	String response = authService.getPassword(id);
+    	return new ResponseEntity<String>(response, HttpStatus.OK);
     }
     
     // JSON inviato dal Client

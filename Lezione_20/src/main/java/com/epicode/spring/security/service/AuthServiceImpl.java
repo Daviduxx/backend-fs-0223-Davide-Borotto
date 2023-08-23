@@ -123,4 +123,12 @@ public class AuthServiceImpl implements AuthService {
     	return userPws;
     }
     
+    @Override
+    public String getPassword(Long id) {
+    	String pw = userRepository.findById(id).get().getPassword();
+    	return pw;
+    }
+    
+    //FAIL: sembra che l'oggetto passwordEncoder non abbia il metodo "decoder()"
+    
 }
