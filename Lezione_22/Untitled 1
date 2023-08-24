@@ -1,0 +1,70 @@
+L'esercitazione ha lo scopo di far familiarizzare gli studenti con l'applicazione di alcuni pattern visti durante il corso.
+
+Esercizio #1 (adapter)
+Scrivere il codice che implementa il pattern Adapter in una applicazione che deve usare le due classi seguenti. Ãˆ fornita anche lâ€™interfaccia usata dalla prima classe.
+
+public interface DataSource { 
+ public String getNomeCompleto(); 
+ public int getEta(); 
+} 
+public class UserData { 
+ private String nomeCompleto; 
+ private int eta; 
+ public void getData(DataSource ds) { 
+ nomeCompleto = ds. getNomeCompleto (); 
+ eta = ds.getEta(); 
+ } 
+} 
+public class Info { 
+ private String nome; 
+ private String cognome; 
+ private Date dataDiNascita; 
+ public String getNome() { return nome;} 
+ public void setNome(String nome) { this.nome = nome;} 
+ public String getCognome() { return cognome;} 
+ public void setCognome(String cognome) { this. cognome = cognome;} 
+ public Date getDataDiNascita() { return dataDiNascita;} 
+ public void DataDiNascita (Date dataDiNascita) { this. dataDiNascita = dataDiNascita;} 
+}
+
+In particolare, si noti che: 
+- UseData chiama getNomeCompleto mentre Info mette a disposizione getNome e getCognome; 
+- UseData chiama getEta mentre Info mette a disposizione getDataDiNascita; 
+- Info non implementa lâ€™interfaccia DataSource. 
+Definire quindi una classe Adapter che implementi DataSource e possa essere utilizzata da UseData, ma 
+allo stesso tempo recuperi le informazioni da un oggetto di classe Info. 
+
+
+Esercizio #2 (composite)
+Modellare questo dominio: 
+â€“ Un libro Ã¨ composto da pagine, eventualmente organizzate in sezioni. Ogni sezione puÃ² contenere sottosezioni (una o piÃ¹) e pagine semplici. 
+â€“ EÊ¼ possibile stampare una pagina singola, una sezione o lÊ¼intero libro.
+- Il libro ha una lista di autori
+- Il libro ha un prezzo
+- Ogni sezione ha un numero di pagine che Ã¨ dato dalla somma delle pagine dei suoi sottoelementi
+- Deve essere possibile chiedere al libro il numero totale di pagine
+
+
+Esercizio #3 (chain of responsibility)
+Realizzare le classi che modellano la seguente gerarchia militare (dal piÃ¹ basso al piÃ¹ alto):
+
+- Capitano
+- Maggiore
+- Tenente
+- Colonnello
+- Generale
+
+Valgono le seguenti regole:
+- Ogni ufficiale conosce il proprio responsabile.
+- Ogni ufficiale svolge una funzione diversa
+- Ogni ufficiale ha uno stipendio diverso
+- Ogni ufficiale Ã¨ collocato gerarchicamente in modo diverso
+
+Gli ufficiali percepiscono i seguenti stipendi:
+- Capitano: 1000
+- Maggiore: 2000
+- Tenente: 3000
+- Colonnello: 4000
+- Generale: 5000
+
+Si realizzi il client, utilizzando il pattern "Chain of responsibility", che dato un importo verifichi quale ufficiale percepisce almeno tale importo partendo dal capitano.
