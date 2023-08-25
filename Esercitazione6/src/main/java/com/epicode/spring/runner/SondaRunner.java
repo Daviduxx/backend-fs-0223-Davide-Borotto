@@ -7,7 +7,7 @@ public class SondaRunner implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
-		System.out.println("Centrale operativa!");
+		System.out.println("Sonde Operative!");
 		
 	}
 

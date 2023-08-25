@@ -8,6 +8,8 @@ public class Esercitazione6Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Esercitazione6Application.class, args);
+		
+		System.out.println("Centrale dei pompieri operativa!");
 	}
 
 }
