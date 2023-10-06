@@ -4,32 +4,29 @@ import java.util.Scanner;
 
 public class Helloworld {
 
-public static void main (String[] args)
-		{
+public static void main (String[] args) {
+	
 		//ESERCIZIO 1
 		System.out.println("MOLTIPLICAZIONE: " + moltiplicazione(4,5));
-		
 		System.out.println("CONCATENAZIONE: " + concatenazione("ciao", 5));
 		
 		//ESERCIZIO 2
 		String[] arrInit = {"html", "css", "js", "ts", "java"};
-		
 		String[] arrModificato = InseriscilnArray(arrInit, "angular");
-		
 		for (int i = 0; i < arrModificato.length; i++) {
 			System.out.println(arrModificato[i]);
 		}
 		
+		//ESERCIZIO 3
+		user();
+		
 		//ESERCIZIO 4
 		System.out.println("perimetro: " + perimetro(2.5,2.5));
-		
 		System.out.println("PARI O DISPARI? " + parioDispari(7));
-		
 		double area = areaTriangolo(2.5, 2.5);
 		System.out.println("area triangolo: " + area);
 	
-		//ESERCIZIO 3
-		user();
+		
 		}
 
 public static int moltiplicazione(int x, int y) {
@@ -44,28 +41,17 @@ public static String concatenazione(String x, int y) {
 
 public static String[] InseriscilnArray(String[] arr, String str) {
 	String[] newArr = new String[6];
-	
 	newArr[0] = arr[0];
 	newArr[1] = arr[1];
 	newArr[2] = arr[2];
 	newArr[3] = str;
 	newArr[4] = arr[3];
 	newArr[5] = arr[4];
-	
-//	for(int i = 0; i < arr.length; i++) {
-//		if(i == 3) {
-//			newArr[i] = str;		
-//		}
-//		else {
-//			newArr[i] = arr[i];		
-//		}
-//	}
 	return newArr;
 }
 
 public static void user() {
 	Scanner sc = new Scanner(System.in);
-	
 	System.out.println("Scrivi un linguaggio di programmazione:");
 	String ling1 = sc.nextLine();
 	System.out.println("Scrivi un  altro linguaggio di programmazione:");
@@ -95,7 +81,6 @@ public static int parioDispari(int x) {
 public static double areaTriangolo(double base, double altezza) {
 	return (base * altezza) / 2;
 }
-
 
 }
 

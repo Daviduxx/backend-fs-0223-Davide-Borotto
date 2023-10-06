@@ -16,4 +16,6 @@
 			<item value="org.eclipse.mylyn.tasks.ui.wizards.import.category"/>
 		</list>
 	</section>
+	<section name="FileSystemImportWizard">
+	</section>
 </section>
