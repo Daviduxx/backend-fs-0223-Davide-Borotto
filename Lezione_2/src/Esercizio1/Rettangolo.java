@@ -18,8 +18,8 @@ public class Rettangolo {
 		return this.altezza * this.larghezza;
 	}
 	
-	public void Dati(Rettangolo r) {
-		System.out.println("Il perimetro del rettangolo è " + r.Perimetro() + "L'area del rettangolo è di " + r.Area());
+	public void Dati() {
+		System.out.println("Il perimetro del rettangolo è " + this.Perimetro() + "L'area del rettangolo è di " + this.Area());
 	}
 	
 	public static void StampaDueRettangoli(Rettangolo r1, Rettangolo r2) {

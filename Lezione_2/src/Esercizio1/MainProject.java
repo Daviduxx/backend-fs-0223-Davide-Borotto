@@ -10,7 +10,7 @@ public class MainProject {
 		System.out.println("Perimetro: " + r1.Perimetro());
 		System.out.println("Area: " + r1.Area());
 		
-		r1.Dati(r1);
+		r1.Dati();
 		Rettangolo.StampaDueRettangoli(r1,r2);
 		
 		// ESERCIZIO 2
