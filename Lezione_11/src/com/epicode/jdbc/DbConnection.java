@@ -38,7 +38,7 @@ public class DbConnection {
 				+ "	name VARCHAR NOT NULL,"
 				+ "	lastname VARCHAR NOT NULL,"
 				+ "	gender VARCHAR,"
-				+ "	birthday LOCALDATE,"
+				+ "	birthday DATE,"
 				+ "	avg INTEGER NOT NULL,"
 				+ "	min_vote INTEGER NOT NULL,"
 				+ "	max_vote INTEGER NOT NULL"
@@ -60,10 +60,10 @@ public class DbConnection {
 				   + " name = '" + st.getNome() + "', "
 				   + " lastname = '" + st.getCognome() + "', "
 				   + " gender = '" + st.getGender() + "', "
-				   + " bithday = '" + st.getBirthday() + "', "
+				   + " birthday = '" + st.getBirthday() + "', "
 				   + " avg  = '"+st.getAvg()+"', "
 				   + " min_vote = '"+st.getMin_vote()+"', "
-				   + " max_vote = '"+st.getMax_vote()+"', "
+				   + " max_vote = '"+st.getMax_vote()+"' "
 				   + " WHERE id = " + id;
 		state.executeUpdate(sql);
 		log.info(st.getCognome() + " " + st.getNome() + " aggiornato!");

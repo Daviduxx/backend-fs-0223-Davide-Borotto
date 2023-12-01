@@ -1,6 +1,6 @@
 package com.epicode.classes;
 
-abstract public class ElementoMultimediale {
+public abstract class ElementoMultimediale {
 	
 	private String titolo;
 	

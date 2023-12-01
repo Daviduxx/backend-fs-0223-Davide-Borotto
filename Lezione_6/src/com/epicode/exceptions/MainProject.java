@@ -14,11 +14,11 @@ public class MainProject {
 		
 		
 		//ESERCIZIO 1
-//		int[] arr = generaArr();
-//		cambiaValore(arr);
+		int[] arr = generaArr();
+		cambiaValore(arr);
 		
 		//esercizio 2
-		Consumo.calcola();
+//		Consumo.calcola();
 	}
 	
 	// ESERCIZIO 1

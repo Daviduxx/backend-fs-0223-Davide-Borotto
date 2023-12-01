@@ -8,7 +8,7 @@ public class While {
 		
 		Scanner sc = new Scanner(System.in);
 			while(true) {
-			System.out.println("Scrivi unav stringa a piacere:");
+			System.out.println("Scrivi una stringa a piacere:");
 			String test = sc.nextLine();
 			if(test.equals(":q")) {
 				break;

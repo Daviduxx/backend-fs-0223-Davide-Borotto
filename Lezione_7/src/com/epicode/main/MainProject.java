@@ -21,10 +21,9 @@ public class MainProject {
 		
 		esercizioSet();
 		
-		List miaLista = creaIntCasuali(8);
-		System.out.println(miaLista);
-		List miaListaModificata = creaLista(miaLista);
-		System.out.println(miaListaModificata);
+		List<Integer> miaLista = creaIntCasuali(8);
+
+		List<Integer> miaListaModificata = creaLista(miaLista);
 		stampaList(miaListaModificata, false);
 		
 		inserisci("davide", "12345");
@@ -35,7 +34,7 @@ public class MainProject {
 		eliminaContatto("pluto");
 		stampaRubrica();
 		cercaPerNome("davide");
-		
+		cercaContatto("67890");
 		
 
 	}
@@ -46,10 +45,16 @@ public class MainProject {
 		Scanner sc = new Scanner(System.in);
 		Set<String> s1 = new HashSet<String>();
 		Set<String> sDuplicate = new HashSet<String>();
-		
-		int userInput = Integer.parseInt(sc.nextLine());
+		System.out.println("Inserisci la dimensione della collection");
+		int userInput = 0;
+		try {
+		userInput = Integer.parseInt(sc.nextLine());
+		} catch (NumberFormatException nfe) {
+			System.out.println(nfe.getMessage());
+		}
 		
 		for (int i = 0; i < userInput; i++) {
+			System.out.println("Inserisci una parola a scelta");
 			String elemento = sc.nextLine();
 			if(s1.contains(elemento)) {
 				sDuplicate.add(elemento);
@@ -58,19 +63,19 @@ public class MainProject {
 				s1.add(elemento);				
 			}
 		}
-		Object[] arr = sDuplicate.toArray();
-		for (Object s : arr) {
-			log.info("Elemento duplicato: " + s.toString());
+		
+		for (String s : sDuplicate) {
+			log.info("Elemento duplicato: " + s);
 		}
 		log.info("NUmero di parole distinte: " + s1.size());
-		Object[] s1Arr = s1.toArray();
-		for (Object s : s1Arr) {
-			log.info("Elemento distinto: " + s.toString());
+
+		for (String s : s1) {
+			log.info("Elemento distinto: " + s);
 		}
 	}
 	
 	//Esercizio 2
-	public static List creaIntCasuali(int x) {
+	public static List<Integer> creaIntCasuali(int x) {
 		
 		Random randomNumber = new Random();
 		List<Integer> l1 = new ArrayList<Integer>();
@@ -80,33 +85,27 @@ public class MainProject {
 		return l1;
 	}
 	
-	public static List creaLista(List x) {
+	public static List<Integer> creaLista(List<Integer> x) {
 		List<Integer> l2 = new ArrayList<Integer>();
 		for (int i = 0; i < x.size(); i++) {
 			l2.add((Integer) x.get(i));
 		}
-		log.info(x.size() + "lunvhezza del singolo array");
+
 		for (int j = x.size() - 1; j >= 0; j--) {
 			l2.add((Integer) x.get(j));
 		}
 		return l2;
 	}
 	
-	public static void stampaList(List x, Boolean y) {
-		if(y) {
+	public static void stampaList(List<Integer> x, Boolean y) {
+		
 			for(int i = 0; i < x.size(); i++) {
-				if(i % 2 == 0) {
+				if(y && i % 2 == 0) {
 					log.info("Elemento con indice pari: " + x.get(i));
+				} else if(!y && i % 2 != 0) {
+					log.info("Elemento con indice dispari: " + x.get(i));
 				}
-			}
-		}
-		else {
-			for(int j = 0; j < x.size(); j++) {
-				if(j % 2 != 0) {
-					log.info("Elemento con indice dispari: " + x.get(j));
-				}
-			}
-		}
+			}	
 	}
 	
 	//ESERCIZIO 3
@@ -123,13 +122,10 @@ public class MainProject {
 	public static void cercaContatto(String numero) {
 		Set<String> nomi = m.keySet();
 		for (Object c : nomi) {
-			if(numero.equals(m.get(nomi))) {
-				log.info("Chiave: " + nomi + "valore: " + numero);
+			if(numero.equals(m.get(c))) {
+				log.info("Chiave: " + c + " valore: " + numero);
 			}
 		}
-	    
-
-
 	}
 	
 	public static void cercaPerNome(String nome) {

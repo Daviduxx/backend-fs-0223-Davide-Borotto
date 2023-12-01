@@ -27,3 +27,39 @@
 2023-07-05 17:34:57,457 [main] INFO  com.epicode.es2.MyThread - somma:1476623
 2023-07-05 17:34:57,457 [main] INFO  com.epicode.es2.MyThread - somma:1436731
 2023-07-05 17:34:57,457 [Thread-3] INFO  com.epicode.es2.MyThread - somma totale: 4386227
+2023-11-21 16:14:44,304 [main] WARN  com.epicode.thread.Main - FINE
+2023-11-21 16:14:44,303 [Thread-1] INFO  com.epicode.thread.Main - Ciclo n. 0 #
+2023-11-21 16:14:44,303 [Thread-0] INFO  com.epicode.thread.Main - Ciclo n. 0 *
+2023-11-21 16:14:45,325 [Thread-0] INFO  com.epicode.thread.Main - Ciclo n. 1 *
+2023-11-21 16:14:45,325 [Thread-1] INFO  com.epicode.thread.Main - Ciclo n. 1 #
+2023-11-21 16:14:46,330 [Thread-0] INFO  com.epicode.thread.Main - Ciclo n. 2 *
+2023-11-21 16:14:46,332 [Thread-1] INFO  com.epicode.thread.Main - Ciclo n. 2 #
+2023-11-21 16:14:47,335 [Thread-0] INFO  com.epicode.thread.Main - Ciclo n. 3 *
+2023-11-21 16:14:47,336 [Thread-1] INFO  com.epicode.thread.Main - Ciclo n. 3 #
+2023-11-21 16:14:48,338 [Thread-0] INFO  com.epicode.thread.Main - Ciclo n. 4 *
+2023-11-21 16:14:48,342 [Thread-1] INFO  com.epicode.thread.Main - Ciclo n. 4 #
+2023-11-21 16:14:49,344 [Thread-0] INFO  com.epicode.thread.Main - Ciclo n. 5 *
+2023-11-21 16:14:49,348 [Thread-1] INFO  com.epicode.thread.Main - Ciclo n. 5 #
+2023-11-21 16:14:50,350 [Thread-0] INFO  com.epicode.thread.Main - Ciclo n. 6 *
+2023-11-21 16:14:50,354 [Thread-1] INFO  com.epicode.thread.Main - Ciclo n. 6 #
+2023-11-21 16:14:51,356 [Thread-1] INFO  com.epicode.thread.Main - Ciclo n. 7 #
+2023-11-21 16:14:51,357 [Thread-0] INFO  com.epicode.thread.Main - Ciclo n. 7 *
+2023-11-21 16:14:52,363 [Thread-0] INFO  com.epicode.thread.Main - Ciclo n. 8 *
+2023-11-21 16:14:52,362 [Thread-1] INFO  com.epicode.thread.Main - Ciclo n. 8 #
+2023-11-21 16:14:53,365 [Thread-0] INFO  com.epicode.thread.Main - Ciclo n. 9 *
+2023-11-21 16:14:53,370 [Thread-1] INFO  com.epicode.thread.Main - Ciclo n. 9 #
+2023-11-21 16:31:46,716 [main] INFO  com.epicode.es2.MyThread - somma:1480916
+2023-11-21 16:31:46,723 [main] INFO  com.epicode.es2.MyThread - somma:1488165
+2023-11-21 16:31:46,723 [main] INFO  com.epicode.es2.MyThread - somma:1489722
+2023-11-21 16:31:46,723 [Thread-3] INFO  com.epicode.es2.MyThread - somma totale: 4458803
+2023-11-21 16:52:09,876 [Thread-1] INFO  com.epicode.es2.MyThread - Somma parziale: 1471444
+2023-11-21 16:52:57,378 [Thread-1] INFO  com.epicode.es2.MyThread - Somma parziale: 1538734
+2023-11-21 16:52:57,378 [Thread-5] INFO  com.epicode.es2.MyThread - Somma parziale: 1483559
+2023-11-21 16:52:57,378 [Thread-3] INFO  com.epicode.es2.MyThread - Somma parziale: 1487216
+2023-11-21 17:09:04,517 [Thread-3] INFO  com.epicode.es2.MyThread - Somma parziale: 1516839
+2023-11-21 17:09:04,517 [Thread-1] INFO  com.epicode.es2.MyThread - Somma parziale: 1518180
+2023-11-21 17:09:04,517 [Thread-5] INFO  com.epicode.es2.MyThread - Somma parziale: 1465462
+2023-11-21 17:10:07,922 [Thread-1] INFO  com.epicode.es2.MyThread - Somma parziale: 1493115
+2023-11-21 17:10:07,922 [Thread-3] INFO  com.epicode.es2.MyThread - Somma parziale: 1496435
+2023-11-21 17:10:07,922 [Thread-5] INFO  com.epicode.es2.MyThread - Somma parziale: 1490700
+2023-11-21 17:10:07,938 [main] INFO  com.epicode.es2.Main - Somma totale: 0

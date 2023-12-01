@@ -19,16 +19,17 @@ public class Main {
 			Studente s3 = new Studente("Luigi", "Verdi", "m", LocalDate.of(1997,11,30), 6, 3, 8);
 			Studente s4 = new Studente("Giovanna", "Blu", "f", LocalDate.of(1997,3,27), 9, 7, 10);
 			
-			db.inserisciStudente(s1);
-			db.inserisciStudente(s2);
-			db.inserisciStudente(s3);
-			db.inserisciStudente(s4);
+//			db.inserisciStudente(s1);
+//			db.inserisciStudente(s2);
+//			db.inserisciStudente(s3);
+//			db.inserisciStudente(s4);
 			
 			db.getAllStudents();
 			System.out.println("" + DbConnection.mStudenti);
 			
-			s2.setCognome("Cambiato");
-			db.modificaStudente("2", DbConnection.mStudenti);
+			s1.setCognome("Cambiato");
+			System.out.println(s2.getCognome());
+			db.modificaStudente("1", DbConnection.mStudenti);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

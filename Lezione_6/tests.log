@@ -36,3 +36,9 @@
 22:04:03.569 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 3 Valore: 8
 22:04:03.569 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 4 Valore: 7
 22:04:08.344 [main] ERROR com.epicode.exceptions.MainProject - Index 9 out of bounds for length 5
+16:49:57.885 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 0 Valore: 6
+16:49:57.893 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 1 Valore: 2
+16:49:57.893 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 2 Valore: 5
+16:49:57.893 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 3 Valore: 9
+16:49:57.893 [main] INFO  com.epicode.exceptions.MainProject - Posizione: 4 Valore: 8
+16:50:51.622 [main] ERROR com.epicode.exceptions.MainProject - Index 9 out of bounds for length 5

@@ -9,30 +9,33 @@ public class Main {
 	
 	private Logger log = LoggerFactory.getLogger(MyThread.class);
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
+		Logger log = LoggerFactory.getLogger(Main.class);
+		int[] arr = generaArr();;
+		int somma = 0;
 		
-		int[] arr = new int[3000];
-		generaArr(arr);
+		Thread t1 = new Thread(new MyThread(arr, 0, 1000, somma));
+		Thread t2 = new Thread(new MyThread(arr, 1000, 2000, somma));
+		Thread t3 = new Thread(new MyThread(arr, 2000, 3000, somma));
+
+		t1.start();
+		t2.start();
+		t3.start();
 		
-		MyThread t1 = new MyThread(0, 1000);
-		MyThread t2 = new MyThread(1000, 2000);
-		MyThread t3 = new MyThread(2000, 3000);
-		
-		int sommaArr1 = t1.somma(arr);
-		int sommaArr2 = t2.somma(arr);
-		int sommaArr3 = t3.somma(arr);
-		
-		MyThread tMain = new MyThread(sommaArr1, sommaArr2, sommaArr3);
-		
-		tMain.start();
+		t1.join();
+		t2.join();
+		t3.join();
  		
+		log.info("Somma totale: "+ somma);
 	}
 	
-	public static void generaArr(int[] arr) {
+	public static int[] generaArr() {
+		int[] arr = new int[3000];
 		Random rand = new Random();
 		for(int i = 0; i < arr.length; i++) {
 			arr[i] = rand.nextInt(3000);
 		}
+		return arr;
 	}
 	
 

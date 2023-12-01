@@ -7,46 +7,30 @@ public class MyThread extends Thread {
 	
 	private Logger log = LoggerFactory.getLogger(MyThread.class);
 	
-	private int somma = 0;
-	private int somma1;
-	private int somma2;
-	private int somma3;
+	private int[] arr;
 	private int inizio;
 	private int fine;
+	int somma;
 
-	
 
-	public MyThread(int inizio, int fine) {
-		super();
-		this.somma = 0;
+	public MyThread(int[] arr, int inizio, int fine, int somma) {
+		this.arr = arr;
 		this.inizio = inizio;
 		this.fine = fine;
+		this.somma = somma;
 	}
-
-
-
-	public MyThread(int somma1, int somma2, int somma3) {
-		super();
-		this.somma1 = somma1;
-		this.somma2 = somma2;
-		this.somma3 = somma3;
-	}
-
 
 
 	@Override
 	public void run() {
-		int sommaTotale = somma1 + somma2 + somma3;
-		 log.info("somma totale: " + sommaTotale);
+		int sommaParziale = 0;
+		for(int i = inizio; i < fine; i++) {
+			sommaParziale += arr[i];
+		}
+		this.somma += sommaParziale;
+		log.info("Somma parziale: " + sommaParziale);
 	}
 	
-	public int somma(int[] arr) {
-		for(int i = inizio; i < fine; i++) {
-			somma += arr[i];
-		}
-		log.info("somma:" + somma);
-		return somma;
-	}
 	
 	
 }

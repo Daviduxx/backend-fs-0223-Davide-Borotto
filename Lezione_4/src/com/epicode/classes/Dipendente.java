@@ -2,7 +2,7 @@ package com.epicode.classes;
 
 public class Dipendente {
 	
-	private static double stipendioBase = 1000.00;
+	public double stipendioBase = 1000.00;
 	private int matricola;
 	private double stipendio;
 	private double importoOrarioStraordinario;

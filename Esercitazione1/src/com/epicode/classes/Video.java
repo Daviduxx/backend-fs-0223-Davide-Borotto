@@ -3,6 +3,7 @@ package com.epicode.classes;
 import java.util.Scanner;
 
 public class Video extends ElementoMultimediale implements Multimedia {
+	
 	private int durata;
 	private int volume;
 	private int luminosita;

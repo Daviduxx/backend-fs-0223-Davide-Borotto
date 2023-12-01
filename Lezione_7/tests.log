@@ -50,3 +50,121 @@
 2023-07-04 16:34:01,897 [main] INFO  com.epicode.main.MainProject - Nome: davide Numero di telefono: 12345
 2023-07-04 16:34:01,897 [main] INFO  com.epicode.main.MainProject - Nome: pippo Numero di telefono: 112233
 2023-07-04 16:34:01,897 [main] INFO  com.epicode.main.MainProject - Nome: davidenumero: 12345
+2023-11-21 14:54:01,210 [main] INFO  com.epicode.main.MainProject - NUmero di parole distinte: 0
+2023-11-21 14:54:01,232 [main] INFO  com.epicode.main.MainProject - 8lunvhezza del singolo array
+2023-11-21 14:54:01,233 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 30
+2023-11-21 14:54:01,233 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 45
+2023-11-21 14:54:01,233 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 37
+2023-11-21 14:54:01,233 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 46
+2023-11-21 14:54:01,233 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 10
+2023-11-21 14:54:01,233 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 28
+2023-11-21 14:54:01,234 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 94
+2023-11-21 14:54:01,234 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 72
+2023-11-21 14:54:01,234 [main] INFO  com.epicode.main.MainProject - Nome: gianni Numero di telefono: 67890
+2023-11-21 14:54:01,235 [main] INFO  com.epicode.main.MainProject - Nome: davide Numero di telefono: 12345
+2023-11-21 14:54:01,235 [main] INFO  com.epicode.main.MainProject - Nome: pluto Numero di telefono: 223344
+2023-11-21 14:54:01,235 [main] INFO  com.epicode.main.MainProject - Nome: pippo Numero di telefono: 112233
+2023-11-21 14:54:01,235 [main] INFO  com.epicode.main.MainProject - Nome: gianni Numero di telefono: 67890
+2023-11-21 14:54:01,235 [main] INFO  com.epicode.main.MainProject - Nome: davide Numero di telefono: 12345
+2023-11-21 14:54:01,235 [main] INFO  com.epicode.main.MainProject - Nome: pippo Numero di telefono: 112233
+2023-11-21 14:54:01,235 [main] INFO  com.epicode.main.MainProject - Nome: davidenumero: 12345
+2023-11-21 14:56:45,034 [main] INFO  com.epicode.main.MainProject - NUmero di parole distinte: 3
+2023-11-21 14:56:45,049 [main] INFO  com.epicode.main.MainProject - Elemento distinto: world
+2023-11-21 14:56:45,050 [main] INFO  com.epicode.main.MainProject - Elemento distinto: ciao
+2023-11-21 14:56:45,050 [main] INFO  com.epicode.main.MainProject - Elemento distinto: hrllo
+2023-11-21 14:56:45,051 [main] INFO  com.epicode.main.MainProject - 8lunvhezza del singolo array
+2023-11-21 14:56:45,051 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 32
+2023-11-21 14:56:45,052 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 12
+2023-11-21 14:56:45,052 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 33
+2023-11-21 14:56:45,052 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 8
+2023-11-21 14:56:45,052 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 41
+2023-11-21 14:56:45,052 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 51
+2023-11-21 14:56:45,052 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 75
+2023-11-21 14:56:45,052 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 51
+2023-11-21 14:56:45,053 [main] INFO  com.epicode.main.MainProject - Nome: gianni Numero di telefono: 67890
+2023-11-21 14:56:45,053 [main] INFO  com.epicode.main.MainProject - Nome: davide Numero di telefono: 12345
+2023-11-21 14:56:45,053 [main] INFO  com.epicode.main.MainProject - Nome: pluto Numero di telefono: 223344
+2023-11-21 14:56:45,053 [main] INFO  com.epicode.main.MainProject - Nome: pippo Numero di telefono: 112233
+2023-11-21 14:56:45,053 [main] INFO  com.epicode.main.MainProject - Nome: gianni Numero di telefono: 67890
+2023-11-21 14:56:45,054 [main] INFO  com.epicode.main.MainProject - Nome: davide Numero di telefono: 12345
+2023-11-21 14:56:45,054 [main] INFO  com.epicode.main.MainProject - Nome: pippo Numero di telefono: 112233
+2023-11-21 14:56:45,054 [main] INFO  com.epicode.main.MainProject - Nome: davidenumero: 12345
+2023-11-21 14:57:40,550 [main] INFO  com.epicode.main.MainProject - Elemento duplicato: ciao
+2023-11-21 14:57:40,567 [main] INFO  com.epicode.main.MainProject - NUmero di parole distinte: 1
+2023-11-21 14:57:40,567 [main] INFO  com.epicode.main.MainProject - Elemento distinto: ciao
+2023-11-21 14:57:40,569 [main] INFO  com.epicode.main.MainProject - 8lunvhezza del singolo array
+2023-11-21 14:57:40,569 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 66
+2023-11-21 14:57:40,569 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 46
+2023-11-21 14:57:40,570 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 31
+2023-11-21 14:57:40,570 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 91
+2023-11-21 14:57:40,570 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 23
+2023-11-21 14:57:40,570 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 95
+2023-11-21 14:57:40,570 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 98
+2023-11-21 14:57:40,570 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 74
+2023-11-21 14:57:40,570 [main] INFO  com.epicode.main.MainProject - Nome: gianni Numero di telefono: 67890
+2023-11-21 14:57:40,570 [main] INFO  com.epicode.main.MainProject - Nome: davide Numero di telefono: 12345
+2023-11-21 14:57:40,570 [main] INFO  com.epicode.main.MainProject - Nome: pluto Numero di telefono: 223344
+2023-11-21 14:57:40,570 [main] INFO  com.epicode.main.MainProject - Nome: pippo Numero di telefono: 112233
+2023-11-21 14:57:40,571 [main] INFO  com.epicode.main.MainProject - Nome: gianni Numero di telefono: 67890
+2023-11-21 14:57:40,572 [main] INFO  com.epicode.main.MainProject - Nome: davide Numero di telefono: 12345
+2023-11-21 14:57:40,572 [main] INFO  com.epicode.main.MainProject - Nome: pippo Numero di telefono: 112233
+2023-11-21 14:57:40,572 [main] INFO  com.epicode.main.MainProject - Nome: davidenumero: 12345
+2023-11-21 15:01:26,573 [main] INFO  com.epicode.main.MainProject - 8lunvhezza del singolo array
+2023-11-21 15:01:26,580 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 43
+2023-11-21 15:01:26,581 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 40
+2023-11-21 15:01:26,581 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 74
+2023-11-21 15:01:26,581 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 88
+2023-11-21 15:01:26,581 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 77
+2023-11-21 15:01:26,581 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 1
+2023-11-21 15:01:26,581 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 20
+2023-11-21 15:01:26,581 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 12
+2023-11-21 15:01:26,581 [main] INFO  com.epicode.main.MainProject - Nome: gianni Numero di telefono: 67890
+2023-11-21 15:01:26,581 [main] INFO  com.epicode.main.MainProject - Nome: davide Numero di telefono: 12345
+2023-11-21 15:01:26,581 [main] INFO  com.epicode.main.MainProject - Nome: pluto Numero di telefono: 223344
+2023-11-21 15:01:26,581 [main] INFO  com.epicode.main.MainProject - Nome: pippo Numero di telefono: 112233
+2023-11-21 15:01:26,581 [main] INFO  com.epicode.main.MainProject - Nome: gianni Numero di telefono: 67890
+2023-11-21 15:01:26,581 [main] INFO  com.epicode.main.MainProject - Nome: davide Numero di telefono: 12345
+2023-11-21 15:01:26,581 [main] INFO  com.epicode.main.MainProject - Nome: pippo Numero di telefono: 112233
+2023-11-21 15:01:26,581 [main] INFO  com.epicode.main.MainProject - Nome: davidenumero: 12345
+2023-11-21 15:07:07,738 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 59
+2023-11-21 15:07:07,745 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 0
+2023-11-21 15:07:07,745 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 59
+2023-11-21 15:07:07,745 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 46
+2023-11-21 15:07:07,745 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 50
+2023-11-21 15:07:07,745 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 62
+2023-11-21 15:07:07,745 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 72
+2023-11-21 15:07:07,745 [main] INFO  com.epicode.main.MainProject - Elemento con indice dispari: 70
+2023-11-21 15:07:07,745 [main] INFO  com.epicode.main.MainProject - Nome: gianni Numero di telefono: 67890
+2023-11-21 15:07:07,745 [main] INFO  com.epicode.main.MainProject - Nome: davide Numero di telefono: 12345
+2023-11-21 15:07:07,746 [main] INFO  com.epicode.main.MainProject - Nome: pluto Numero di telefono: 223344
+2023-11-21 15:07:07,746 [main] INFO  com.epicode.main.MainProject - Nome: pippo Numero di telefono: 112233
+2023-11-21 15:07:07,746 [main] INFO  com.epicode.main.MainProject - Nome: gianni Numero di telefono: 67890
+2023-11-21 15:07:07,746 [main] INFO  com.epicode.main.MainProject - Nome: davide Numero di telefono: 12345
+2023-11-21 15:07:07,746 [main] INFO  com.epicode.main.MainProject - Nome: pippo Numero di telefono: 112233
+2023-11-21 15:07:07,746 [main] INFO  com.epicode.main.MainProject - Nome: davidenumero: 12345
+2023-11-21 15:08:42,837 [main] INFO  com.epicode.main.MainProject - Nome: gianni Numero di telefono: 67890
+2023-11-21 15:08:42,844 [main] INFO  com.epicode.main.MainProject - Nome: davide Numero di telefono: 12345
+2023-11-21 15:08:42,844 [main] INFO  com.epicode.main.MainProject - Nome: pluto Numero di telefono: 223344
+2023-11-21 15:08:42,844 [main] INFO  com.epicode.main.MainProject - Nome: pippo Numero di telefono: 112233
+2023-11-21 15:08:42,844 [main] INFO  com.epicode.main.MainProject - Nome: gianni Numero di telefono: 67890
+2023-11-21 15:08:42,844 [main] INFO  com.epicode.main.MainProject - Nome: davide Numero di telefono: 12345
+2023-11-21 15:08:42,844 [main] INFO  com.epicode.main.MainProject - Nome: pippo Numero di telefono: 112233
+2023-11-21 15:08:42,844 [main] INFO  com.epicode.main.MainProject - Nome: davidenumero: 12345
+2023-11-21 15:10:38,613 [main] INFO  com.epicode.main.MainProject - Nome: gianni Numero di telefono: 67890
+2023-11-21 15:10:38,619 [main] INFO  com.epicode.main.MainProject - Nome: davide Numero di telefono: 12345
+2023-11-21 15:10:38,619 [main] INFO  com.epicode.main.MainProject - Nome: pluto Numero di telefono: 223344
+2023-11-21 15:10:38,619 [main] INFO  com.epicode.main.MainProject - Nome: pippo Numero di telefono: 112233
+2023-11-21 15:10:38,619 [main] INFO  com.epicode.main.MainProject - Nome: gianni Numero di telefono: 67890
+2023-11-21 15:10:38,619 [main] INFO  com.epicode.main.MainProject - Nome: davide Numero di telefono: 12345
+2023-11-21 15:10:38,619 [main] INFO  com.epicode.main.MainProject - Nome: pippo Numero di telefono: 112233
+2023-11-21 15:10:38,619 [main] INFO  com.epicode.main.MainProject - Nome: davidenumero: 12345
+2023-11-21 15:10:38,619 [main] INFO  com.epicode.main.MainProject - Chiave: [gianni, davide, pippo]valore: 67890
+2023-11-21 15:11:04,230 [main] INFO  com.epicode.main.MainProject - Nome: gianni Numero di telefono: 67890
+2023-11-21 15:11:04,235 [main] INFO  com.epicode.main.MainProject - Nome: davide Numero di telefono: 12345
+2023-11-21 15:11:04,236 [main] INFO  com.epicode.main.MainProject - Nome: pluto Numero di telefono: 223344
+2023-11-21 15:11:04,236 [main] INFO  com.epicode.main.MainProject - Nome: pippo Numero di telefono: 112233
+2023-11-21 15:11:04,236 [main] INFO  com.epicode.main.MainProject - Nome: gianni Numero di telefono: 67890
+2023-11-21 15:11:04,236 [main] INFO  com.epicode.main.MainProject - Nome: davide Numero di telefono: 12345
+2023-11-21 15:11:04,236 [main] INFO  com.epicode.main.MainProject - Nome: pippo Numero di telefono: 112233
+2023-11-21 15:11:04,236 [main] INFO  com.epicode.main.MainProject - Nome: davidenumero: 12345
+2023-11-21 15:11:04,236 [main] INFO  com.epicode.main.MainProject - Chiave: giannivalore: 67890
